@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Value from "@/components/Value";
 import Achievements from "@/components/Achievements";
 import ThreeStars from "@/components/ThreeStars";
+import EstateinExperience from "@/components/EstateinExperience";
+import EstateinTeam from "@/components/EstateinTeam";
 
 export default function About() {
   return (
@@ -13,7 +15,7 @@ export default function About() {
       <div className="flex items-center gap-[40px]">
         <div className="items-start mr-auto">
           <ThreeStars />
-          
+
           <div className=" mt-[16px] ml-5 tracking-wide">
             <p className="text-[38px] font-urbanist-semibold">Our Journey</p>
             <p className="mt-[10px] text-[#999999] text-[15px] w-[550px]">
@@ -62,6 +64,10 @@ export default function About() {
       <Value />
 
       <Achievements />
+
+      <EstateinExperience />
+
+      <EstateinTeam />
 
     </div>
   );

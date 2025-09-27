@@ -2,14 +2,13 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface CardProps {
+interface ValueProps {
   img: string;
   title: string;
   subtext: string;
-
 }
 
-export default function EachValue({img, title, subtext}: CardProps) {
+export default function EachValue({img, title, subtext}: ValueProps) {
   return (
     <>
       <div className="tracking-wide items-start">

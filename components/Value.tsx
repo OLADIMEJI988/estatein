@@ -8,7 +8,7 @@ import ThreeStars from "./ThreeStars";
 export default function Value() {
   return (
     <div className="flex items-center gap-[30px] mt-[120px]">
-      <div className="items-start mr-auto">
+      <div className="items-start mr-[5px]">
         <ThreeStars />
         
         <div className=" mt-[16px] ml-5 tracking-wide">
@@ -22,7 +22,7 @@ export default function Value() {
       </div>
 
       <div className="p-2 bg-[#191919] rounded-xl w-full">
-        <div className="border border-[#262626] p-[50px] bg-[#141414] rounded-xl">
+        <div className="border border-[#262626] p-[48px] bg-[#141414] rounded-xl">
           <div className="flex">
             <div>
               <EachValue
@@ -43,7 +43,7 @@ export default function Value() {
             </div>
           </div>
 
-          {/* LIne */}
+          {/* Middle LIne */}
           <div className="h-[1px] w-full bg-[#262626] my-[24px]"></div>
 
           <div className="flex">
