@@ -7,6 +7,7 @@ import Achievements from "@/components/Achievements";
 import ThreeStars from "@/components/ThreeStars";
 import EstateinExperience from "@/components/EstateinExperience";
 import EstateinTeam from "@/components/EstateinTeam";
+import ValuedClients from "@/components/ValuedClients";
 
 export default function About() {
   return (
@@ -68,6 +69,8 @@ export default function About() {
       <EstateinExperience />
 
       <EstateinTeam />
+
+      <ValuedClients />
 
     </div>
   );

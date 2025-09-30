@@ -44,3 +44,17 @@ body {
   padding: 10px 10px;
   border-radius: 8px;
 }
+
+#nprogress .bar {
+  background: #703BF7 !important;
+  height: 3px; 
+}
+
+#nprogress .bar {
+  box-shadow: 0 0 10px #703BF7, 0 0 5px #703BF7;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #703BF7, 0 0 5px #703BF7;
+}
+

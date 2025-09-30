@@ -1,3 +1,4 @@
+import Representative from "./Representative";
 import ThreeStars from "./ThreeStars";
 
 export default function EstateinTeam() {
@@ -16,7 +17,14 @@ export default function EstateinTeam() {
             real estate dreams a reality.
           </p>
         </div>
-        
+
+        <div className="flex mt-[60px] ml-5 gap-[20px]">
+           <Representative img="/max.svg" name="Max Mitchell" role="Founder" />
+           <Representative img="/sarah.svg" name="Sarah Johnson" role="Chief Real Estate Officer" />
+           <Representative img="/david.svg" name="David Brown" role="Head of Property Management" />
+           <Representative img="/michael.svg" name="Michael Turner" role="Legal Counsel" />
+        </div>
+
       </div>
     </div>
   );
