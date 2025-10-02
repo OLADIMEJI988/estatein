@@ -54,7 +54,7 @@ export default function Representative({ img, name, role }: StepProps) {
 
             <input
               type="text"
-              placeholder="Say Hello"
+              placeholder="Say Hello 👋"
               className="text-white w-full border border-[#262626] pl-[20px] py-[14px] bg-[#191919] rounded-full placeholder:text-white tracking-wide text-[16px] cursor-pointer focus:outline-none focus:border-[#703BF7]"
             />
           </div>
