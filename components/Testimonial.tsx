@@ -132,7 +132,7 @@ export default function Testimonial() {
       <div className="items-start mt-2">
         <ThreeStars />
 
-        <div className="ml-5 mt-[16px] tracking-wide">
+        <div className="mt-[14px] ml-4 tracking-wide">
           <p className="text-4xl font-urbanist-semibold text-white">
             What Our Clients Say
           </p>

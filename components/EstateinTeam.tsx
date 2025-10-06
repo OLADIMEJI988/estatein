@@ -7,7 +7,7 @@ export default function EstateinTeam() {
       <div className="items-start mr-auto">
         <ThreeStars />
 
-        <div className=" mt-[16px] ml-5 tracking-wide">
+        <div className="mt-[14px] ml-4 tracking-wide">
           <p className="text-[38px] font-urbanist-semibold">
             Meet the Estatein Team
           </p>

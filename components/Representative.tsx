@@ -2,6 +2,7 @@
 
 import { div } from "framer-motion/client";
 import Image from "next/image";
+import AnimatedSendSvg from "./AnimatedSendSvg";
 
 interface StepProps {
   img: string;
@@ -42,14 +43,7 @@ export default function Representative({ img, name, role }: StepProps) {
           <p className="mt-1 text-[#999999] text-[16px] mb-[20px]">{role}</p>
           <div className="relative w-full flex">
             <div className="h-9 w-9 flex justify-center items-center bg-[#703BF7] rounded-full absolute right-3 top-1/2 transform -translate-y-1/2">
-              <Image
-                src="/send.svg"
-                alt="banner"
-                width={20}
-                height={20}
-                className="object-contain"
-                priority
-              />
+              <AnimatedSendSvg />
             </div>
 
             <input

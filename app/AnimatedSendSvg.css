@@ -1,0 +1,30 @@
+/* Flames flicker */
+@keyframes flicker {
+    0% { opacity: 0.3; transform: translateY(0) scale(1); }
+    50% { opacity: 0.9; transform: translateY(-1px) scale(1.2); }
+    100% { opacity: 0.3; transform: translateY(0) scale(1); }
+  }
+  
+  .flame {
+    animation: flicker 1s infinite ease-in-out;
+    transform-origin: center;
+  }
+  
+  .flame1 { animation-delay: 0s; }
+  .flame2 { animation-delay: 0.2s; }
+  .flame3 { animation-delay: 0.4s; }
+  
+  /* Send icon shake & pulse */
+  @keyframes launch {
+    0%   { transform: translate(0,0) rotate(0deg) scale(1); }
+    25%  { transform: translate(1px,-1px) rotate(-2deg) scale(1); }
+    50%  { transform: translate(-1px,1px) rotate(2deg) scale(1); }
+    75%  { transform: translate(2px,-2px) rotate(-1deg) scale(1); }
+    100% { transform: translate(0,0) rotate(0deg) scale(1); }
+  }
+  
+  .send-icon {
+    animation: launch 1.8s infinite ease-in-out;
+    transform-origin: center;
+  }
+  

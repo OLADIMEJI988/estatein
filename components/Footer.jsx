@@ -1,3 +1,4 @@
+import AnimatedSendSvg from "./AnimatedSendSvg";
 import TilesSvg from "./TilesSvg";
 import Image from "next/image";
 
@@ -62,18 +63,11 @@ export default function Footer() {
             <p className="text-[#999999] text-[13px] mr-auto">
               Enter Your Email
             </p>
-            <Image
-              className="h-[17px]"
-              src="/send.svg"
-              alt="logo"
-              width={30}
-              height={20}
-              priority
-            />
+            <AnimatedSendSvg />
           </div>
         </div>
 
-        <div className="flex gap-10 font-urbanist">
+        <div className="flex gap-16 font-urbanist">
           <div className="text-[13px]">
             <p className="text-[#999999] text-[14px] mb-3">Home</p>
             <p>Hero Section</p>

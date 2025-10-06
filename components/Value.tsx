@@ -11,7 +11,7 @@ export default function Value() {
       <div className="items-start mr-[5px]">
         <ThreeStars />
         
-        <div className=" mt-[16px] ml-5 tracking-wide">
+        <div className="mt-[14px] ml-4 tracking-wide">
           <p className="text-[38px] font-urbanist-semibold">Our Values</p>
           <p className="mt-[10px] text-[#999999] text-[15px] w-[400px]">
             Our story is one of continuous growth and evolution. We started as a

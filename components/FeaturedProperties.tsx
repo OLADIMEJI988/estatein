@@ -113,7 +113,7 @@ export default function FeaturedProperties() {
       <div className="items-start mt-2">
         <ThreeStars />
 
-        <div className="ml-5 tracking-wide mt-[16px]">
+        <div className="mt-[14px] ml-4 tracking-wide">
           <p className="text-4xl font-urbanist-semibold text-white">
             Featured Properties
           </p>

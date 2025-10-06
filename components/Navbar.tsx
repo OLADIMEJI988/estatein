@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <>
       <Loader />
-      <div className="border borderbg bg-[#1A1A1A] flex justify-between px-10 items-center py-[14px] font-urbanist">
+      <div className="border borderbg bg-[#1A1A1A] flex justify-between px-12 items-center py-[14px] font-urbanist">
         <div className="flex items-center">
           <Image
             className="h-[30px] object-contain"

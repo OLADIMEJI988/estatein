@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Block from "./Block";
+import Bolt from "./Bolt";
 
 interface ClientProps {
   year: string;
@@ -33,14 +35,7 @@ export default function Client({
         <div className="mt-[30px] flex">
           <div className="mr-16">
             <div className="flex">
-              <Image
-                className="w-[20px] transform transition-transform duration-300 hover:scale-108"
-                src="/domainicon.svg"
-                alt="banner"
-                width={30}
-                height={20}
-                priority
-              />
+              <Block />
               <p className="text-[#999999] text-[14px] ml-[4px]">Domain</p>
             </div>
             <p className="mt-[6px]">Commercial Real Estate</p>
@@ -50,14 +45,7 @@ export default function Client({
 
           <div>
             <div className="flex">
-              <Image
-                className="w-[20px] transform transition-transform duration-300 hover:scale-108"
-                src="/graybolt.svg"
-                alt="banner"
-                width={30}
-                height={20}
-                priority
-              />
+              <Bolt />
               <p className="text-[#999999] text-[14px] ml-[4px]">Category</p>
             </div>
             <p className="mt-[6px]">{category}</p>
