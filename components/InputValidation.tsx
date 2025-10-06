@@ -60,7 +60,7 @@ export default function InputValidation({
         value={value}
         placeholder={placeholder}
         onChange={handleChange}
-        className={`border mt-1 bg-[#191919] placeholder:text-[13px] placeholder:text-[#666666] p-3 rounded-md focus:outline-none ${
+        className={`border mt-1 bg-[#191919] placeholder:text-[13px] placeholder:text-[#666666] p-3 rounded-md focus:outline-none cursor-pointer ${
           error ? "border-red-500" : "border-[#262626] focus:border-[#703BF7]"
         }`}
       />

@@ -95,9 +95,12 @@ export default function DropdownValidation({
 
       {/* Options */}
       <div
-        className={`transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-[500px] mt-2 border border-[#262626]" : "max-h-0"
-        } rounded-md bg-[#141414]`}
+        className={`transition-all duration-300 overflow-hidden rounded-md bg-[#141414] 
+    ${
+      isOpen
+        ? "max-h-[500px] mt-2 border border-[#262626]"
+        : "max-h-0 border border-transparent"
+    }`}
       >
         {options.map((option, index) => (
           <div

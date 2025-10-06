@@ -180,7 +180,7 @@ export default function Property() {
   return (
     <>
       <div
-        className="font-urbanist relative mb-[165px] border-b border-[#262626] px-[65px] py-[100px]"
+        className="font-urbanist relative mb-[170px] border-b border-[#262626] px-[65px] py-[100px]"
         style={{
           background:
             "linear-gradient(90deg, #1D1D1D 0%, #1B1B1B 3%, transparent 40%)",

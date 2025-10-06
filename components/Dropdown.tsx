@@ -7,10 +7,10 @@ interface DropdownProps {
   img: string;
   title: string;
   options: string[];
-  isOpen?: boolean; 
+  isOpen?: boolean;
   onToggle?: () => void;
   onSelect?: (option: string) => void;
-  selected?: string; 
+  selected?: string;
 }
 
 export default function Dropdown({
@@ -31,11 +31,8 @@ export default function Dropdown({
   const selected = controlledSelected ?? selectedUncontrolled;
 
   const toggleDropdown = () => {
-    if (onToggle) {
-      onToggle();
-    } else {
-      setIsOpenUncontrolled(!isOpenUncontrolled);
-    }
+    if (onToggle) onToggle();
+    else setIsOpenUncontrolled(!isOpenUncontrolled);
   };
 
   const handleSelect = (option: string) => {
@@ -60,9 +57,7 @@ export default function Dropdown({
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen, onToggle]);
 
   return (
@@ -104,8 +99,10 @@ export default function Dropdown({
 
       {/* Dropdown Options */}
       <div
-        className={`mt-2 w-full absolute bg-[#141414] border border-[#703BF7] rounded-md shadow-lg z-50 overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+        className={`absolute mt-2 w-full rounded-md shadow-lg z-50 overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen
+            ? "max-h-60 opacity-100 border border-[#703BF7] bg-[#141414]"
+            : "max-h-0 opacity-0 border border-transparent bg-transparent"
         }`}
       >
         {options.map((option, index) => (
