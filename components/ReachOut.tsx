@@ -66,12 +66,12 @@ export default function ReachOut() {
           />
           <DropdownValidation
             title="No. of Bathrooms"
-            options={["1", "2", "3", "4+", "5+"]}
+            options={["1", "2", "3", "4", "5+"]}
             placeholder="Select no. of Bathrooms"
           />
           <DropdownValidation
             title="No. of Bedrooms"
-            options={["1", "2", "3", "4+", "5+"]}
+            options={["1", "2", "3", "4", "5+"]}
             placeholder="Select no. of Bedrooms"
           />
         </div>
