@@ -3,18 +3,24 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import Loader from "./Loader"; 
+import Loader from "./Loader";
 
 export default function Navbar() {
   const pathname = usePathname();
 
-  const linkClasses = (path: string) =>
-    `px-[14px] py-[12px] rounded-lg border transition-colors duration-700
-     ${
-       pathname === path
-         ? "bg-[#141414] border-[#262626]"
-         : "bg-transparent border-transparent"
-     }`;
+  const linkClasses = (path: string) => {
+    const isActive =
+      pathname === path ||
+      pathname.startsWith(`${path}/`) ||
+      (path === "/property" && pathname.includes("property"));
+
+    return `px-[14px] py-[12px] rounded-lg border transition-colors duration-700
+    ${
+      isActive
+        ? "bg-[#141414] border-[#262626]"
+        : "bg-transparent border-transparent"
+    }`;
+  };
 
   return (
     <>
@@ -29,7 +35,9 @@ export default function Navbar() {
             height={38}
             priority
           />
-          <p className="font-urbanist-semibold text-xl tracking-wide">Estatein</p>
+          <p className="font-urbanist-semibold text-xl tracking-wide">
+            Estatein
+          </p>
         </div>
 
         <div className="flex text-sm tracking-wide text-white space-x-1">
@@ -52,7 +60,7 @@ export default function Navbar() {
             href="/contact"
             className={`border tracking-wide rounded-lg text-sm px-[14px] py-[16px] transition-colors duration-700 ${
               pathname === "/contact"
-                ? "bg-[#141414] border border-[#262626]"
+                ? "bg-[#703BF7] border border-[#262626]"
                 : "bg-[#141414] border border-[#262626]"
             }`}
           >
