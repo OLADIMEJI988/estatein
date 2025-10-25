@@ -15,7 +15,6 @@ export default function Contact() {
   const [startIndex, setStartIndex] = useState(0);
   const cardsPerPage = 2;
 
-  // --- Data (expand as needed) ---
   const officeCards = useMemo(
     () => [
       {
@@ -46,12 +45,45 @@ export default function Contact() {
         subtext:
           "This regional office serves suburban clients, offering tailored real estate solutions in fast-growing neighborhoods.",
       },
-      // add more cards if needed
+      {
+        category: "Coastal",
+        location: "Seaside Hub",
+        address: "77 Ocean Drive, Marina Bay, Seaside City",
+        subtext:
+          "Overlooking the coast, our Seaside Hub manages premium waterfront properties and leisure estates, blending business with breathtaking ocean views.",
+      },
+      {
+        category: "Tech District",
+        location: "Innovation Office",
+        address: "901 Silicon Street, Tech Valley, Metropolis",
+        subtext:
+          "Our Innovation Office partners with top tech companies to create smart, future-ready living spaces powered by sustainability and automation.",
+      },
+      {
+        category: "International",
+        location: "European Branch",
+        address: "24 Regent Square, Central London, United Kingdom",
+        subtext:
+          "Located in the heart of London, our European branch connects global investors to the UK and European real estate markets with precision and insight.",
+      },
+      {
+        category: "International",
+        location: "Middle East Office",
+        address: "15 Palm Tower, Dubai Marina, UAE",
+        subtext:
+          "Our Dubai office handles luxury developments and large-scale property investments across the Middle East, focusing on innovation and architectural excellence.",
+      },
+      {
+        category: "Regional",
+        location: "Northern Regional Office",
+        address: "220 Highridge Road, Northgate, Metropolis",
+        subtext:
+          "Catering to northern clients, this office offers personalized guidance for both commercial and residential investments in emerging suburban communities.",
+      },
     ],
     []
   );
 
-  // --- Filter by tab ---
   const filteredOffices = useMemo(
     () =>
       activeTab === "All"
@@ -64,7 +96,6 @@ export default function Contact() {
   const totalPages = Math.max(1, Math.ceil(totalCards / cardsPerPage));
   const currentPage = Math.floor(startIndex / cardsPerPage) + 1;
 
-  // --- Navigation handlers ---
   const handleNext = () => {
     if (startIndex + cardsPerPage < totalCards) {
       setStartIndex((s) => s + cardsPerPage);
@@ -77,12 +108,11 @@ export default function Contact() {
     }
   };
 
-  // When switching tabs reset pagination to first page
   const handleSetTab = (tab: TabType) => {
     setActiveTab(tab);
     setStartIndex(0);
   };
-  // Animate indicator position by index of tab
+
   const tabs = ["All", "Regional", "International"] as const;
   type TabType = (typeof tabs)[number];
 
@@ -90,7 +120,6 @@ export default function Contact() {
 
   return (
     <>
-      {/* Header Section */}
       <div
         className="font-urbanist relative px-[65px] py-[95px]"
         style={{
@@ -110,7 +139,6 @@ export default function Contact() {
         </p>
       </div>
 
-      {/* Contact Info Cards */}
       <div className="p-2 bg-[#191919] mb-[80px]">
         <div className="flex gap-3 justify-center p-4 bg-[#141414] border border-[#262626]">
           <Card img="/mail.svg" text="sholanke49@gmail.com" />
@@ -120,7 +148,6 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Contact Form Section */}
       <div className="mx-[65px] mb-[80px] font-urbanist">
         <ThreeStars />
 
@@ -138,7 +165,6 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Form Fields */}
         <div className="flex flex-col gap-8 border border-[#262626] rounded-lg p-[60px] ml-4 mt-12">
           <div className="flex gap-[30px]">
             <InputValidation
@@ -215,7 +241,6 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Office Locations Section */}
       <div className="mx-[65px] mb-[80px] font-urbanist">
         <ThreeStars />
 
@@ -233,9 +258,8 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Tabs */}
         <div className="relative ml-4 mt-12">
-          <div className="w-auto inline-flex bg-[#191919] p-3 text-white gap-[10px] rounded-lg tracking-wide border border-[#262626]">
+          <div className="w-auto inline-flex bg-[#191919] p-3 text-white gap-[10px] rounded-lg tracking-wide">
             {tabs.map((tab, idx) => (
               <button
                 key={tab}
@@ -251,8 +275,7 @@ export default function Contact() {
             ))}
           </div>
 
-          {/* Slider */}
-          <div className="absolute left-0 top-full mt-2 w-full pointer-events-none">
+          <div className="absolute left-0 top-full mt-5 w-full pointer-events-none">
             <div className="relative">
               <motion.div
                 layout
@@ -268,10 +291,10 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="ml-4 mt-[45px]">
+        <div className="ml-4 mt-[65px]">
           <AnimatePresence mode="wait">
             <motion.div
-              key={`${activeTab}-${startIndex}`} 
+              key={`${activeTab}-${startIndex}`}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
@@ -295,7 +318,6 @@ export default function Contact() {
 
           {/* Navigation */}
           <div className="flex justify-between w-full gap-2 mt-6 items-center">
-            {/* Counter: current page of total pages */}
             <p className="text-white text-sm -mt-3">
               <span
                 className={currentPage === 1 ? "opacity-40" : "opacity-100"}
@@ -308,7 +330,6 @@ export default function Contact() {
               </span>
             </p>
 
-            {/* Prev / Next */}
             <div className="flex gap-2">
               <button
                 onClick={handlePrev}
