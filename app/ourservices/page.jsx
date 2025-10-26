@@ -27,7 +27,7 @@ export default function Services() {
       </div>
 
       <div className="p-2 bg-[#191919] mb-[80px]">
-        <div className="flex gap-3 justify-center p-4 bg-[#141414] border border-[#262626]">
+        <div className="flex gap-4 justify-center p-4 bg-[#141414] border border-[#262626]">
           <Card img="/home.svg" text="Find Your Dream Home" />
           <Card img="/camera.svg" text="Unlock Property Value" />
           <Card img="/property.svg" text="Effortless Property Management" />

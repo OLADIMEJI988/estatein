@@ -62,11 +62,11 @@ export default function Home() {
       </div>
 
       <div className="p-2 bg-[#191919]">
-        <div className="flex gap-3 justify-center p-4 bg-[#141414] border border-[#262626]">
-           <Card img="/home.svg" text="Find Your Dream Home" />
-           <Card img="/camera.svg" text="Unlock Property Value" />
-           <Card img="/property.svg" text="Effortless Property Management" />
-           <Card img="/sun.svg" text="Smart Investments, Informed Decisions" />
+        <div className="flex gap-4 justify-center p-4 bg-[#141414] border border-[#262626]">
+          <Card img="/home.svg" text="Find Your Dream Home" />
+          <Card img="/camera.svg" text="Unlock Property Value" />
+          <Card img="/property.svg" text="Effortless Property Management" />
+          <Card img="/sun.svg" text="Smart Investments, Informed Decisions" />
         </div>
       </div>
 
@@ -81,8 +81,6 @@ export default function Home() {
       <div>
         <FAQ />
       </div>
- 
-      
     </>
   );
 }

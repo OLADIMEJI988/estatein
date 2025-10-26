@@ -140,7 +140,7 @@ export default function Contact() {
       </div>
 
       <div className="p-2 bg-[#191919] mb-[80px]">
-        <div className="flex gap-3 justify-center p-4 bg-[#141414] border border-[#262626]">
+        <div className="flex gap-4 justify-center p-4 bg-[#141414] border border-[#262626]">
           <Card img="/mail.svg" text="sholanke49@gmail.com" />
           <Card img="/purplephone.svg" text="+234 8136170619" />
           <Card img="/location.svg" text="Main Headquarters" />
@@ -306,7 +306,7 @@ export default function Contact() {
                 .map((office, idx) => (
                   <div
                     key={idx}
-                    className="w-[48%] h-[350px] flex-shrink-0 flex flex-col"
+                    className="w-[50%] h-[350px] flex-shrink-0 flex flex-col"
                   >
                     <div className="flex-grow flex">
                       <OfficeCard {...office} />
@@ -318,14 +318,18 @@ export default function Contact() {
 
           {/* Navigation */}
           <div className="flex justify-between w-full gap-2 mt-6 items-center">
-            <p className="text-white text-sm -mt-3">
+            <p className="text-[#999999] text-sm -mt-3">
               <span
-                className={currentPage === 1 ? "opacity-40" : "opacity-100"}
+                className={currentPage === 1 ? "text-[#666666]" : "text-white"}
               >
                 {String(currentPage).padStart(2, "0")}
               </span>{" "}
-              of{" "}
-              <span className={totalPages === 1 ? "opacity-40" : "opacity-100"}>
+              <span className="text-white">of</span>{" "}
+              <span
+                className={
+                  currentPage === totalPages ? "text-[#666666]" : "text-white"
+                }
+              >
                 {String(totalPages).padStart(2, "0")}
               </span>
             </p>

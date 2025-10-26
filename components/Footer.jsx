@@ -113,6 +113,7 @@ export default function Footer() {
         <div className="gap-6 flex text-[11px] tracking-wide">
           <p>@2023 Estatein. All Rights Reserved.</p>
           <p>Terms & Conditions</p>
+          <p>Developed by Sholanke Oladimeji</p>
         </div>
 
         <div className="flex items-center gap-[7px]">
@@ -129,7 +130,6 @@ export default function Footer() {
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-[#26262674] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
 
-              {/* Icon */}
               <Image
                 className="h-[17px] cursor-pointer relative z-10"
                 src={icon}
