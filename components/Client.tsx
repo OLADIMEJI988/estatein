@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Block from "./Block";
 import Bolt from "./Bolt";
 

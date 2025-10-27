@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import EachValue from "./EachValue";
 import ThreeStars from "./ThreeStars";
 

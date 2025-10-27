@@ -114,8 +114,8 @@ export default function FAQ() {
 
           <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-4">
             <p className="text-[#999999] text-base lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
-              Find answers to common questions about Estatein's services,
-              property listings, and the real estate process. We're here to
+              Find answers to common questions about Estatein&apos;s services,
+              property listings, and the real estate process. We&apos;re here to
               provide clarity and assist you every step of the way.
             </p>
 

@@ -12,8 +12,8 @@ export default function EstateinExperience() {
             Navigating the Estatein Experience
           </p>
           <p className="mt-[10px] text-[#999999] text-[15px] pr-[130px]">
-            At Estatein, we've designed a straightforward process to help you
-            find and purchase your dream property with ease. Here's a
+            At Estatein, we&apos;ve designed a straightforward process to help you
+            find and purchase your dream property with ease. Here&apos;s a
             step-by-step guide to how it all works.
           </p>
         </div>

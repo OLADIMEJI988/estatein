@@ -133,7 +133,7 @@ export default function FeaturedProperties() {
             <p className="text-[#999999] text-base lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
               Explore our handpicked selection of featured properties. Each
               listing offers a glimpse into exceptional homes and investments
-              available through Estatein. Click "View Details" for more
+              available through Estatein. Click &quot;View Details&quot; for more
               information.
             </p>
 

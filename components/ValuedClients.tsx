@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import FaqCard from "./FaqCard";
 
 import ThreeStars from "./ThreeStars";
 import Client from "./Client";
@@ -103,7 +102,7 @@ export default function ValuedClients() {
           <p className="mt-[10px] text-[#999999] text-[15px] pr-[130px]">
             At Estatein, we have had the privilege of working with a diverse
             range of clients across various industries. Here are some of the
-            clients we've had the pleasure of serving
+            clients we&apos;ve had the pleasure of serving
           </p>
         </div>
 

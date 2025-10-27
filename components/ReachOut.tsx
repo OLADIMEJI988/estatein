@@ -11,12 +11,12 @@ export default function ReachOut() {
       <ThreeStars />
       <div className="mt-[14px] ml-4 tracking-wide">
         <p className="text-[38px] font-urbanist-semibold">
-          Let's Make it Happen
+          Let&lsquo;s Make it Happen
         </p>
         <p className="mt-[10px] text-[#999999] text-[14px] pr-[130px]">
           Ready to take the first step toward your dream property? Fill out the
           form below, and our real estate wizards will work their magic to find
-          your perfect match. Don't wait; let's embark on this exciting journey
+          your perfect match. Don&lsquo;t wait; let&lsquo;s embark on this exciting journey
           together.
         </p>
       </div>

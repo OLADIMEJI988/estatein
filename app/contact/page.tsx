@@ -131,11 +131,11 @@ export default function Contact() {
           Get in Touch with Estatein
         </p>
         <p className="text-[#999999] mt-[10px] text-[14px]">
-          Welcome to Estatein's Contact Us page. We're here to assist you with
-          any inquiries, requests, or feedback you may have. Whether you're
+          Welcome to Estatein&apos;s Contact Us page. We&apos;re here to assist you with
+          any inquiries, requests, or feedback you may have. Whether you&apos;re
           looking to buy or sell a property, explore investment opportunities,
-          or simply want to connect, we're just a message away. Reach out to us,
-          and let's start a conversation.
+          or simply want to connect, we&apos;re just a message away. Reach out to us,
+          and let&apos;s start a conversation.
         </p>
       </div>
 
@@ -153,14 +153,14 @@ export default function Contact() {
 
         <div className="mt-[14px] ml-4 tracking-wide">
           <p className="text-4xl font-urbanist-semibold text-white">
-            Let's Connect
+            Let&apos;s Connect
           </p>
 
           <p className="text-[#999999] text-[13px] mr-auto mt-4">
-            We're excited to connect with you and learn more about your real
+            We&apos;re excited to connect with you and learn more about your real
             estate goals. Use the form below to get in touch with Estatein.
-            Whether you're a prospective client, partner, or simply curious
-            about our services, we're here to answer your questions and provide
+            Whether you&apos;re a prospective client, partner, or simply curious
+            about our services, we&apos;re here to answer your questions and provide
             the assistance you need.
           </p>
         </div>
@@ -251,7 +251,7 @@ export default function Contact() {
 
           <p className="text-[#999999] text-[13px] mr-auto mt-4">
             Estatein is here to serve you across multiple locations. Whether
-            you're looking to meet our team, discuss real estate opportunities,
+            you&apos;re looking to meet our team, discuss real estate opportunities,
             or simply drop by for a chat, we have offices conveniently located
             to serve your needs. Explore the categories below to find the
             Estatein office nearest to you.
@@ -260,7 +260,7 @@ export default function Contact() {
 
         <div className="relative ml-4 mt-12">
           <div className="w-auto inline-flex bg-[#191919] p-3 text-white gap-[10px] rounded-lg tracking-wide">
-            {tabs.map((tab, idx) => (
+            {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => handleSetTab(tab)}

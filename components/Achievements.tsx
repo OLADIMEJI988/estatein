@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
 import ThreeStars from "./ThreeStars";
 import AchievementCard from "./AchievementCard";
 

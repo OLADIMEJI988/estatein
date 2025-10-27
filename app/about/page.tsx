@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import Value from "@/components/Value";
 import Achievements from "@/components/Achievements";
 import ThreeStars from "@/components/ThreeStars";
@@ -22,7 +21,7 @@ export default function About() {
             <p className="mt-[10px] text-[#999999] text-[15px] w-[550px]">
               Our story is one of continuous growth and evolution. We started as
               a small team with big dreams, determined to create a real estate
-              platform that transcended the ordinary. Over the years, we've
+              platform that transcended the ordinary. Over the years, we&apos;ve
               expanded our reach, forged valuable partnerships, and gained the
               trust of countless clients.
             </p>

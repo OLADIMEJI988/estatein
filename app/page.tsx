@@ -7,7 +7,7 @@ import FAQ from "@/components/FAQ";
 export default function Home() {
   return (
     <>
-      <div className="font-urbanist flex lg:items-stretch justify-between">
+      <div className="font-urbanist flex lg:items-stretch justify-between max-lg:justify-center">
         <div className="bg-[#141414] lg:w-[54vw] lg:flex lg:flex-col justify-center items-center lg:text-start">
           <div className="lg:hidden w-full my-5 px-5 flex justify-center">
             <Image
