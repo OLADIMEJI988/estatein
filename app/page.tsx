@@ -43,7 +43,7 @@ export default function Home() {
             </div>
 
             <div className="flex max-lg:grid max-lg:grid-cols-2 gap-3 w-full">
-              <div className="w-full max-lg:h-[110px] max-lg:p-5 border border-[#262626] bg-[#191919] p-[13px] rounded-lg text-center">
+              <div className="w-full max-lg:h-[110px] max-lg:p-5 border border-[#262626] bg-[#191919] p-[13px] rounded-lg text-center lg:text-start">
                 <p className="font-urbanist-semibold text-2xl max-lg:text-3xl">
                   200+
                 </p>
@@ -52,7 +52,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="w-full max-lg:h-[110px] max-lg:p-5 border border-[#262626] bg-[#191919] p-[13px] rounded-lg text-center">
+              <div className="w-full max-lg:h-[110px] max-lg:p-5 border border-[#262626] bg-[#191919] p-[13px] rounded-lg text-center lg:text-start">
                 <p className="font-urbanist-semibold text-2xl max-lg:text-3xl">
                   10k+
                 </p>
@@ -61,7 +61,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="hidden lg:flex border border-[#262626] bg-[#191919] p-[13px] w-[157px] rounded-lg text-center">
+              <div className="hidden lg:flex lg:flex-col w-full border border-[#262626] bg-[#191919] p-[13px] rounded-lg text-center lg:text-start">
                 <p className="font-urbanist-semibold text-2xl">16+</p>
                 <p className="text-[#999999] text-[12px] mt-[6px]">
                   Years of Experience
@@ -101,15 +101,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
+      <div className="max-lg:mt-24">
         <FeaturedProperties />
       </div>
 
-      <div>
+      <div className="max-lg:mt-24">
         <Testimonial />
       </div>
 
-      <div>
+      <div className="max-lg:my-24">
         <FAQ />
       </div>
     </>
