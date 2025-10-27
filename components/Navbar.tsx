@@ -25,17 +25,17 @@ export default function Navbar() {
   return (
     <>
       <Loader />
-      <div className="min-w-[535px] border borderbg bg-[#1A1A1A] flex justify-between max-lg:px-4 px-12 items-center py-[14px] font-urbanist">
+      <div className="min-w-[540px] border borderbg bg-[#1A1A1A] flex justify-between max-lg:px-4 px-12 items-center py-[14px] font-urbanist">
         <div className="flex items-center">
           <Image
-            className="h-[30px] object-contain"
+            className="h-[30px] max-lg:h-[35px] object-contain"
             src="/logo.svg"
             alt="logo"
             width={42}
             height={38}
             priority
           />
-          <p className="font-urbanist-semibold text-xl tracking-wide">
+          <p className="font-urbanist-semibold text-xl max-lg:text-2xl tracking-wide">
             Estatein
           </p>
         </div>

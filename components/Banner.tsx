@@ -18,7 +18,7 @@ export default function Banner() {
 
   return (
     <div
-      className={`overflow-hidden min-w-[535px] bg-[#1A1A1A] transition-all duration-500 ${
+      className={`overflow-hidden min-w-[540px] bg-[#1A1A1A] transition-all duration-500 ${
         isClosing
           ? "max-h-0 opacity-0 -translate-y-5"
           : "max-h-20 opacity-100 translate-y-0"
@@ -26,7 +26,7 @@ export default function Banner() {
     >
       <div className="relative w-full font-urbanist">
         <Image
-          className="w-full h-11 object-cover"
+          className="w-full h-11 max-lg:h-12 object-cover"
           src="/Abstract Design.svg"
           alt="banner"
           width={700}
@@ -35,7 +35,7 @@ export default function Banner() {
         />
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className="text-white ml-auto tracking-wide text-[13px] text-center">
+          <p className="text-white ml-auto tracking-wide text-[13px] max-lg:text-[15px] text-center">
             ✨ Discover Your Dream Property with Estatein
           </p>
 

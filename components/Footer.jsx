@@ -6,7 +6,6 @@ export default function Footer() {
   return (
     <>
       <div className="relative font-urbanist border border-[#262626] flex flex-col justify-center lg:overflow-hidden max-lg:min-w-[540px] max-lg:h-[530px]">
-        {/* Background Tiles */}
         <div className="flex max-lg:flex-col justify-between -mt-[60px] max-lg:-mt-0">
           <div className="max-lg:scale-y-[-1]">
             <TilesSvg />
@@ -56,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Email Field */}
-          <div className="flex font-urbanist w-full sm:w-72 items-center border border-[#262626] tracking-wide py-3 max-lg:py-5 px-3 max-lg:px-5 mt-5 rounded-lg mx-auto lg:mx-0 max-lg:min-w-[500px]">
+          <div className="flex font-urbanist w-full sm:w-72 items-center border border-[#262626] focus-within:border-[#703BF7] tracking-wide py-3 max-lg:py-5 px-3 max-lg:px-5 mt-5 rounded-lg mx-auto lg:mx-0 max-lg:min-w-[500px] transition-colors duration-200 group">
             <Image
               className="h-[17px] max-lg:h-[27px]"
               src="/email.svg"
@@ -76,7 +75,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Right Section - Links */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 text-center lg:text-left font-urbanist">
           {[
             {
@@ -119,7 +117,9 @@ export default function Footer() {
             },
           ].map((section, idx) => (
             <div key={idx} className="text-[13px]">
-              <p className="text-[#999999] text-[16px] lg:text-[14px] mb-4 lg:mb-3">{section.title}</p>
+              <p className="text-[#999999] text-[16px] lg:text-[14px] mb-4 lg:mb-3">
+                {section.title}
+              </p>
               {section.links.map((link, i) => (
                 <p
                   key={i}
@@ -133,9 +133,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Footer */}
-      <div className="py-4 font-urbanist tracking-wide flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 px-6 sm:px-10 lg:px-[75px] bg-[#191919] text-center sm:text-left max-lg:min-w-[535px]">
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 lg:text-[11px] text-[12px] tracking-wide justify-center sm:justify-start">
+      <div className="py-4 font-urbanist tracking-wide flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 px-6 sm:px-10 lg:px-[75px] bg-[#191919] text-center sm:text-left max-lg:min-w-[540px]">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 sm:text-[11px] text-[12px] tracking-wide justify-center sm:justify-start">
           <p>@2023 Estatein. All Rights Reserved.</p>
           <p>Terms & Conditions</p>
           <p>Developed by Sholanke Oladimeji</p>
