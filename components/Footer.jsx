@@ -5,21 +5,23 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <>
-      <div className="relative font-urbanist border border-[#262626] flex flex-col justify-center overflow-hidden">
-        <div className="flex justify-between -mt-[60px]">
-          <TilesSvg />
-
-          <div className="transform scale-x-[-1]">
+      <div className="relative font-urbanist border border-[#262626] flex flex-col justify-center lg:overflow-hidden max-lg:min-w-[540px] max-lg:h-[530px]">
+        {/* Background Tiles */}
+        <div className="flex max-lg:flex-col justify-between -mt-[60px] max-lg:-mt-0">
+          <div className="max-lg:scale-y-[-1]">
+            <TilesSvg />
+          </div>
+          <div className="transform scale-x-[-1] max-lg:-mt-[70px]">
             <TilesSvg />
           </div>
         </div>
 
-        <div className="absolute inset-0 flex justify-center items-center h-[200px] mt-10 mx-14 px-6">
+        <div className="absolute inset-0 flex flex-col lg:flex-row justify-center items-center text-center lg:text-left h-auto lg:h-[200px] mt-0 lg:mt-10 mx-4 sm:mx-8 lg:mx-14 px-6 gap-6">
           <div className="max-w-3xl mr-auto">
-            <p className="text-[28px] font-bold mb-3">
+            <p className="text-[35px] lg:text-[28px] font-bold mb-3">
               Start Your Real Estate Journey Today
             </p>
-            <p className="text-[#999999] text-[13px] mb-6 leading-6">
+            <p className="text-[#999999] text-[18px] lg:text-[14px] mb-6 leading-6">
               Your dream property is just a click away. Whether you're looking
               for a new home, a strategic investment, or expert real estate
               advice, Estatein is here to assist you every step of the way. Take
@@ -29,94 +31,117 @@ export default function Footer() {
             </p>
           </div>
 
-          <button className="px-[14px] text-[13px] h-12 bg-[#703BF7] rounded-lg">
+          <button className="w-full lg:w-auto px-5 py-3 text-[18px] lg:text-[14px] sm:text-[14px] h-12 max-lg:h-14 bg-[#703BF7] rounded-lg">
             Explore Properties
           </button>
         </div>
       </div>
 
-      <div className="py-[65px] tracking-wide flex bg-[#141414] px-[75px]">
+      {/* Main Footer Links */}
+      <div className="py-10 sm:py-[65px] tracking-wide flex flex-col lg:flex-row bg-[#141414] px-6 sm:px-10 lg:px-[75px] gap-10 lg:gap-20 max-lg:min-w-[535px]">
+        {/* Left Section */}
         <div className="mr-auto">
           <div className="flex items-center">
             <Image
-              className="h-[30px] object-contain"
+              className="h-[30px] max-lg:h-[40px] object-contain"
               src="/logo.svg"
               alt="logo"
               width={42}
               height={38}
               priority
             />
-            <p className="font-urbanist-semibold text-xl tracking-wide">
+            <p className="font-urbanist-semibold text-2xl lg:text-xl tracking-wide ml-2">
               Estatein
             </p>
           </div>
 
-          <div className="flex font-urbanist w-72 items-center border border-[#262626] tracking-wide py-3 px-3 mt-[22px] cursor-pointer rounded-lg">
+          {/* Email Field */}
+          <div className="flex font-urbanist w-full sm:w-72 items-center border border-[#262626] tracking-wide py-3 max-lg:py-5 px-3 max-lg:px-5 mt-5 rounded-lg mx-auto lg:mx-0 max-lg:min-w-[500px]">
             <Image
-              className="h-[17px]"
+              className="h-[17px] max-lg:h-[27px]"
               src="/email.svg"
               alt="logo"
               width={31}
               height={20}
               priority
             />
-            <p className="text-[#999999] text-[13px] mr-auto">
-              Enter Your Email
-            </p>
+
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              className="bg-transparent outline-none text-[#999999] text-[18px] lg:text-[13px] mr-auto ml-2 w-full placeholder-[#999999]"
+            />
+
             <AnimatedSendSvg />
           </div>
         </div>
 
-        <div className="flex gap-16 font-urbanist">
-          <div className="text-[13px]">
-            <p className="text-[#999999] text-[14px] mb-3">Home</p>
-            <p>Hero Section</p>
-            <p className="my-2">Features</p>
-            <p>Properties</p>
-            <p className="my-2">Testimonials</p>
-            <p>FAQ's</p>
-          </div>
-
-          <div className="text-[13px]">
-            <p className="text-[#999999] text-[14px] mb-3">About Us</p>
-            <p>Our Story</p>
-            <p className="my-2">Our Works</p>
-            <p>How It Works</p>
-            <p className="my-2">Our Team</p>
-            <p>Our Clients</p>
-          </div>
-
-          <div className="text-[13px]">
-            <p className="text-[#999999] text-[14px] mb-3">Properties</p>
-            <p>Portfolio</p>
-            <p className="my-2">Categories</p>
-          </div>
-
-          <div className="text-[13px]">
-            <p className="text-[#999999] text-[14px] mb-3">Services</p>
-            <p>Valuation Mastery</p>
-            <p className="my-2">Strategic Marketing</p>
-            <p>Negotiation Wizardry</p>
-            <p className="my-2">Closing Success</p>
-            <p>Property Management</p>
-          </div>
-
-          <div className="text-[13px]">
-            <p className="text-[#999999] text-[14px] mb-3">Contact Us</p>
-            <p>Contact Form</p>
-            <p className="my-2">Our Offices</p>
-          </div>
+        {/* Right Section - Links */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 text-center lg:text-left font-urbanist">
+          {[
+            {
+              title: "Home",
+              links: [
+                "Hero Section",
+                "Features",
+                "Properties",
+                "Testimonials",
+                "FAQ's",
+              ],
+            },
+            {
+              title: "About Us",
+              links: [
+                "Our Story",
+                "Our Works",
+                "How It Works",
+                "Our Team",
+                "Our Clients",
+              ],
+            },
+            {
+              title: "Properties",
+              links: ["Portfolio", "Categories"],
+            },
+            {
+              title: "Services",
+              links: [
+                "Valuation Mastery",
+                "Strategic Marketing",
+                "Negotiation Wizardry",
+                "Closing Success",
+                "Property Management",
+              ],
+            },
+            {
+              title: "Contact Us",
+              links: ["Contact Form", "Our Offices"],
+            },
+          ].map((section, idx) => (
+            <div key={idx} className="text-[13px]">
+              <p className="text-[#999999] text-[16px] lg:text-[14px] mb-4 lg:mb-3">{section.title}</p>
+              {section.links.map((link, i) => (
+                <p
+                  key={i}
+                  className="my-3 lg:my-2 hover:text-[#703BF7] max-lg:text-[14px] cursor-pointer transition-colors"
+                >
+                  {link}
+                </p>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="py-[14px] font-urbanist tracking-wide flex items-center justify-between px-[75px] bg-[#191919]">
-        <div className="gap-6 flex text-[11px] tracking-wide">
+      {/* Bottom Footer */}
+      <div className="py-4 font-urbanist tracking-wide flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 px-6 sm:px-10 lg:px-[75px] bg-[#191919] text-center sm:text-left max-lg:min-w-[535px]">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 lg:text-[11px] text-[12px] tracking-wide justify-center sm:justify-start">
           <p>@2023 Estatein. All Rights Reserved.</p>
           <p>Terms & Conditions</p>
           <p>Developed by Sholanke Oladimeji</p>
         </div>
 
-        <div className="flex items-center gap-[7px]">
+        <div className="flex items-center justify-center gap-4 lg:gap-3">
           {[
             "/facebook.svg",
             "/linkedin.svg",
@@ -125,13 +150,11 @@ export default function Footer() {
           ].map((icon, i) => (
             <div
               key={i}
-              className="relative h-9 w-9 flex justify-center items-center rounded-full bg-[#141414] group overflow-hidden"
+              className="relative h-10 w-10 lg:h-9 lg:w-9 flex justify-center items-center rounded-full bg-[#141414] group overflow-hidden"
             >
-              {/* Hover overlay */}
               <div className="absolute inset-0 bg-[#26262674] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-
               <Image
-                className="h-[17px] cursor-pointer relative z-10"
+                className="h-[22px] lg:h-[17px] cursor-pointer relative z-10"
                 src={icon}
                 alt="logo"
                 width={42}

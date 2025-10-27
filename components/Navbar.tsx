@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <>
       <Loader />
-      <div className="border borderbg bg-[#1A1A1A] flex justify-between px-12 items-center py-[14px] font-urbanist">
+      <div className="min-w-[535px] border borderbg bg-[#1A1A1A] flex justify-between max-lg:px-4 px-12 items-center py-[14px] font-urbanist">
         <div className="flex items-center">
           <Image
             className="h-[30px] object-contain"
@@ -40,7 +40,7 @@ export default function Navbar() {
           </p>
         </div>
 
-        <div className="flex text-sm tracking-wide text-white space-x-1">
+        <div className="max-lg:hidden flex text-sm tracking-wide text-white space-x-1">
           <Link href="/" className={linkClasses("/")}>
             Home
           </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div>
+        <div className="max-lg:hidden">
           <Link
             href="/contact"
             className={`border tracking-wide rounded-lg text-sm px-[14px] py-[16px] transition-colors duration-700 ${
@@ -66,6 +66,17 @@ export default function Navbar() {
           >
             Contact Us
           </Link>
+        </div>
+
+        <div className="flex items-center lg:hidden">
+          <Image
+            className="h-[30px] object-contain"
+            src="/hamburger.svg"
+            alt="logo"
+            width={42}
+            height={38}
+            priority
+          />
         </div>
       </div>
     </>

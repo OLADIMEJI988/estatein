@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import PropertyCard from "./PropertyCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThreeStars from "./ThreeStars";
 
@@ -38,8 +38,7 @@ export default function FeaturedProperties() {
     {
       img: "/retreat.svg",
       title: "Metropolitan Haven 2",
-      subtext:
-        "Urban living at its finest with luxurious amenities included...",
+      subtext: "Urban living at its finest with luxurious amenities included...",
       moretext: "Read More",
     },
     {
@@ -74,18 +73,34 @@ export default function FeaturedProperties() {
 
   const [startIndex, setStartIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [cardsPerPage, setCardsPerPage] = useState(3);
+
+  useEffect(() => {
+    const updateCardsPerPage = () => {
+      if (window.innerWidth <= 1024) {
+        setCardsPerPage(1); // mobile & tablet
+      } else {
+        setCardsPerPage(3); // desktop
+      }
+    };
+
+    updateCardsPerPage();
+    window.addEventListener("resize", updateCardsPerPage);
+
+    return () => window.removeEventListener("resize", updateCardsPerPage);
+  }, []);
 
   const handleNext = () => {
-    if (startIndex + 3 < properties.length) {
+    if (startIndex + cardsPerPage < properties.length) {
       setDirection(1);
-      setStartIndex(startIndex + 3);
+      setStartIndex(startIndex + cardsPerPage);
     }
   };
 
   const handlePrev = () => {
-    if (startIndex - 3 >= 0) {
+    if (startIndex - cardsPerPage >= 0) {
       setDirection(-1);
-      setStartIndex(startIndex - 3);
+      setStartIndex(startIndex - cardsPerPage);
     }
   };
 
@@ -94,10 +109,7 @@ export default function FeaturedProperties() {
       x: dir > 0 ? 100 : -100,
       opacity: 0,
     }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
+    center: { x: 0, opacity: 1 },
     exit: (dir: number) => ({
       x: dir > 0 ? -100 : 100,
       opacity: 0,
@@ -105,36 +117,36 @@ export default function FeaturedProperties() {
   };
 
   const totalCards = properties.length;
-  const cardsPerPage = 3;
   const currentCount = Math.min(startIndex + cardsPerPage, totalCards);
 
   return (
-    <div className="overflow-hidden my-[54px] font-urbanist flex justify-center mx-auto items-center">
-      <div className="items-start mt-2">
+    <div className="w-full my-[60px] font-urbanist flex justify-center px-4 md:px-8 lg:px-12">
+      <div className="w-full max-w-[1280px]">
         <ThreeStars />
 
-        <div className="mt-[14px] ml-4 tracking-wide">
-          <p className="text-4xl font-urbanist-semibold text-white">
+        <div className="mt-[14px] lg:ml-4">
+          <p className="text-4xl font-semibold text-white max-lg:ml-4">
             Featured Properties
           </p>
-          <div className="flex items-center mt-4">
-            <p className="text-[#999999] text-[13px] mr-auto w-[900px]">
+
+          <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-4 max-lg:min-w-[500px]">
+            <p className="text-[#999999] text-base lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
               Explore our handpicked selection of featured properties. Each
               listing offers a glimpse into exceptional homes and investments
               available through Estatein. Click "View Details" for more
               information.
             </p>
 
-            <button className="bg-[#191919] cursor-pointer text-sm border border-[#262626] px-[17px] py-[15px] -translate-y-2 rounded-lg">
+            <button className="bg-[#191919] cursor-pointer text-sm max-lg:text-[16px] max-lg:mt-3 border border-[#262626] px-6 py-3 max-lg:py-4 rounded-lg hover:bg-[#1e1e1e] transition">
               View All Properties
             </button>
           </div>
 
           {/* Cards */}
-          <div className="flex gap-5 justify-center mt-12 mb-[34px] relative min-h-[320px]">
+          <div className="flex lg:overflow-hidden flex-wrap justify-center sm:justify-start gap-7 mt-12 mb-[34px] relative min-h-[320px]">
             <AnimatePresence mode="wait" custom={direction}>
               {properties
-                .slice(startIndex, startIndex + 3)
+                .slice(startIndex, startIndex + cardsPerPage)
                 .map((property, idx) => {
                   const exitDelay = idx * 0.05;
                   return (
@@ -150,6 +162,7 @@ export default function FeaturedProperties() {
                         ease: "easeOut",
                         delay: exitDelay,
                       }}
+                      className="w-full sm:w-[90%] md:w-[70%] lg:w-[31%]"
                     >
                       <PropertyCard
                         img={property.img}
@@ -162,13 +175,14 @@ export default function FeaturedProperties() {
                 })}
             </AnimatePresence>
           </div>
-
-          <div className="h-[1px] bg-[#262626] w-full"></div>
+           
+          {/* Divider */}
+          <div className="h-[1px] bg-[#262626] w-full max-lg:min-w-[500px] lg:-mt-1"></div>
 
           {/* Navigation */}
-          <div className="flex justify-between w-full gap-2 mt-[14px] items-center">
+          <div className="flex max-lg:min-w-[500px] justify-between w-full gap-4 mt-[14px] items-center">
             {/* Counter */}
-            <p className="text-white text-sm -mt-3">
+            <p className="text-white text-sm max-lg:text-base">
               <span className={startIndex === 0 ? "opacity-40" : "opacity-100"}>
                 {currentCount.toString().padStart(2, "0")}
               </span>{" "}
@@ -184,17 +198,16 @@ export default function FeaturedProperties() {
               </span>
             </p>
 
-            {/* Navigations */}
-            <div className="flex gap-2">
+            <div className="flex gap-2 max-lg:gap-3">
               <button
                 onClick={handlePrev}
                 disabled={startIndex === 0}
-                className="py-[12px] px-[11px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
+                className="p-[15px] bg-[#191919] border border-[#262626] rounded-full text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[15.7px] rounded-full"
+                  className="w-[15px] max-lg:w-[17px]"
                   src="/previous.svg"
-                  alt="banner"
+                  alt="previous"
                   width={30}
                   height={20}
                   priority
@@ -202,13 +215,13 @@ export default function FeaturedProperties() {
               </button>
               <button
                 onClick={handleNext}
-                disabled={startIndex + cardsPerPage >= properties.length}
-                className="p-[8px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
+                disabled={startIndex + cardsPerPage >= totalCards}
+                className="p-3 bg-[#191919] border border-[#262626] rounded-full text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[21px] rounded-full"
+                  className="w-[21px] max-lg:w-[23px]"
                   src="/next.svg"
-                  alt="banner"
+                  alt="next"
                   width={30}
                   height={20}
                   priority

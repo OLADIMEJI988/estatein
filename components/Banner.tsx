@@ -18,7 +18,7 @@ export default function Banner() {
 
   return (
     <div
-      className={`overflow-hidden bg-[#1A1A1A] transition-all duration-500 ${
+      className={`overflow-hidden min-w-[535px] bg-[#1A1A1A] transition-all duration-500 ${
         isClosing
           ? "max-h-0 opacity-0 -translate-y-5"
           : "max-h-20 opacity-100 translate-y-0"
