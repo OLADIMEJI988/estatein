@@ -156,7 +156,7 @@ export default function ValuedClients() {
           {/* Navigation */}
           <div className="flex justify-between w-full gap-2 mt-[14px] items-center">
             {/* Counter */}
-            <p className="text-white text-sm -mt-3">
+            <p className="text-white text-sm max-lg:text-base -mt-3">
               <span className={startIndex === 0 ? "opacity-40" : "opacity-100"}>
                 {currentCount.toString().padStart(2, "0")}
               </span>{" "}
@@ -179,7 +179,7 @@ export default function ValuedClients() {
                 className="py-[12px] px-[11px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[15.7px] rounded-full"
+                  className="w-[15.7px] max-lg:w-[17px] rounded-full"
                   src="/previous.svg"
                   alt="prev"
                   width={30}
@@ -193,7 +193,7 @@ export default function ValuedClients() {
                 className="p-[8px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[21px] rounded-full"
+                  className="w-[21px] max-lg:w-[23px] rounded-full"
                   src="/next.svg"
                   alt="next"
                   width={30}

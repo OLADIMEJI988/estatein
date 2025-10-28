@@ -62,7 +62,7 @@ export default function About() {
 
         <div className="flex justify-end max-lg:justify-center w-auto max-lg:h-[420px] max-lg:border max-lg:border-[#262626] max-lg:rounded-xl">
           <Image
-            className="w-[580px] h-full object-cover max-lg:w-full max-lg:h-auto max-lg:rounded-xl"
+            className="w-[580px] h-full object-cover max-lg:w-full max-lg:h-[420px]  max-lg:rounded-xl"
             src="/houseonhand.svg"
             alt="banner"
             width={580}
