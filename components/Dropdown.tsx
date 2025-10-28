@@ -61,10 +61,10 @@ export default function Dropdown({
   }, [isOpen, onToggle]);
 
   return (
-    <div className="relative w-[210px]" ref={dropdownRef}>
+    <div className="relative w-[210px] max-lg:w-full" ref={dropdownRef}>
       {/* Dropdown Trigger */}
       <div
-        className={`bg-[#141414] flex items-center border rounded-[8px] tracking-wide px-[12px] py-[10px] cursor-pointer ${
+        className={`bg-[#141414] flex items-center border rounded-[8px] tracking-wide px-[12px] py-[10px] max-lg:py-[15px] cursor-pointer ${
           isOpen ? "border-[#703BF7]" : "border-[#262626]"
         }`}
         onClick={toggleDropdown}

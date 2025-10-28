@@ -30,21 +30,21 @@ export default function Navbar() {
 
       {/* Navbar */}
       <div
-        className={`min-w-0 border borderbg bg-[#1A1A1A] flex justify-between max-lg:px-4 px-12 items-center py-[14px] max-lg:py-[19px] font-urbanist relative z-50 transition-all duration-300 ${
+        className={`min-w-0 border borderbg bg-[#1A1A1A] flex justify-between max-lg:px-3 px-12 items-center py-[14px] max-lg:py-[17px] font-urbanist relative z-50 transition-all duration-300 ${
           menuOpen ? "max-lg:opacity-0 max-lg:pointer-events-none" : ""
         }`}
       >
         {/* Logo */}
         <div className="flex items-center">
           <Image
-            className="h-[30px] max-lg:h-[35px] object-contain"
+            className="h-[30px] max-lg:h-[33px] object-contain"
             src="/logo.svg"
             alt="logo"
             width={42}
             height={38}
             priority
           />
-          <p className="font-urbanist-semibold text-xl max-lg:text-2xl tracking-wide">
+          <p className="font-urbanist-semibold text-xl max-lg:text-[22px] tracking-wide">
             Estatein
           </p>
         </div>

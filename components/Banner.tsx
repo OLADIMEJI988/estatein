@@ -44,7 +44,7 @@ export default function Banner() {
           </p>
 
           <div
-            className="p-[5px] max-lg:p-[8px] ml-auto mr-6 max-lg:mr-2 bg-[#303030] hover:bg-[#141414] smooth-transition cursor-pointer rounded-full"
+            className="p-[5px] ml-auto mr-6 max-lg:mr-2 bg-[#303030] hover:bg-[#141414] smooth-transition cursor-pointer rounded-full"
             onClick={handleClose}
           >
             <Image

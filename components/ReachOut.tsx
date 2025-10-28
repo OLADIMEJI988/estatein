@@ -7,13 +7,13 @@ import Image from "next/image";
 
 export default function ReachOut() {
   return (
-    <div className="items-start mr-auto mt-[110px] font-urbanist">
+    <div className="items-start mr-auto mt-[110px] max-lg:w-full font-urbanist">
       <ThreeStars />
-      <div className="mt-[14px] ml-4 tracking-wide">
-        <p className="text-[38px] font-urbanist-semibold">
+      <div className="mt-[14px] ml-4 max-lg:ml-2 tracking-wide">
+        <p className="text-[38px] max-lg:text-[35px] font-urbanist-semibold">
           Let&lsquo;s Make it Happen
         </p>
-        <p className="mt-[10px] text-[#999999] text-[14px] pr-[130px]">
+        <p className="mt-[10px] text-[#999999] text-[14px] max-lg:text-[15px] pr-[130px] max-lg:pr-[25px]">
           Ready to take the first step toward your dream property? Fill out the
           form below, and our real estate wizards will work their magic to find
           your perfect match. Don&lsquo;t wait; let&lsquo;s embark on this exciting journey
@@ -21,9 +21,9 @@ export default function ReachOut() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-8 border border-[#262626] rounded-lg p-[60px] ml-4 mt-12">
+      <div className="flex flex-col gap-8 border border-[#262626] rounded-lg p-[60px] max-lg:px-[15px] max-lg:py-[30px] max-lg:mr-[23px] ml-4 max-lg:ml-0 max-lg:w-auto mt-12">
         {/* First Row - Text Inputs */}
-        <div className="flex gap-[30px]">
+        <div className="flex max-lg:flex-col gap-[30px]">
           <InputValidation
             title="First Name"
             placeholder="Enter First Name"
@@ -53,7 +53,7 @@ export default function ReachOut() {
         </div>
 
         {/* Second Row - Dropdowns */}
-        <div className="flex gap-[30px] mt-[20px]">
+        <div className="flex max-lg:flex-col gap-[30px] mt-[20px] max-lg:mt-0">
           <DropdownValidation
             title="Preferred Location"
             options={["Lagos", "Abuja", "Port Harcourt", "Ibadan", "Other"]}
@@ -77,9 +77,9 @@ export default function ReachOut() {
         </div>
 
         {/* Third Row */}
-        <div className="flex gap-[30px] w-full mt-[20px] items-start">
+        <div className="flex max-lg:flex-col gap-[30px] w-full mt-[20px] max-lg:mt-0 items-start">
           {/* Left column: Dropdown */}
-          <div className="flex flex-col w-[101%]">
+          <div className="flex flex-col w-[101%] max-lg:w-full">
             <DropdownValidation
               title="Budget"
               options={[
@@ -94,8 +94,8 @@ export default function ReachOut() {
           </div>
 
           {/* Right column: Inputs */}
-          <div className="flex gap-[20px] w-full -mt-[1px]">
-            <div className="tracking-wide flex flex-col justify-center min-w-[47%]">
+          <div className="flex max-lg:flex-col gap-[20px] w-full -mt-[1px]">
+            <div className="tracking-wide flex flex-col justify-center min-w-[47%] max-lg:w-full">
               <p className="mb-2">Preferred Contact Method</p>
 
               {/* Input wrapper */}
@@ -113,7 +113,7 @@ export default function ReachOut() {
                 <input
                   type="text"
                   placeholder="Enter Your Number"
-                  className="flex-1 bg-transparent cursor-pointer text-white placeholder:text-[13px] placeholder:text-[#666666] focus:outline-none pr-6"
+                  className="flex-1 bg-transparent cursor-pointer text-white placeholder:text-[13px] placeholder:text-[#666666] focus:outline-none pr-6 max-lg:pr-0"
                 />
 
                 {/* Right Circle */}
@@ -122,7 +122,7 @@ export default function ReachOut() {
             </div>
 
             <div className="tracking-wide flex flex-col justify-center w-full mt-[4px]">
-              <div className="mb-[32px]"></div>
+              <div className="mb-[32px] max-lg:mb-0"></div>
               <div className="relative w-full">
                 {/* Mail Icon */}
                 <Image
@@ -146,7 +146,7 @@ export default function ReachOut() {
         </div>
 
         {/* Message Input */}
-        <div className="gap-[30px] w-full mt-[20px] items-start">
+        <div className="gap-[30px] w-full mt-[20px] max-lg:mt-0 items-start">
           <p>Message</p>
           <textarea
             placeholder="Enter your Message here.."
@@ -154,8 +154,8 @@ export default function ReachOut() {
           />
         </div>
 
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-[6px]">
+        <div className="flex max-lg:flex-col items-center justify-between">
+          <div className="flex items-center gap-[6px] max-lg:gap-[10px]">
             <input
               type="checkbox"
               name="price"
@@ -167,7 +167,7 @@ export default function ReachOut() {
             </p>
           </div>
 
-          <button className="bg-[#703BF7] px-[25px] py-[14px] rounded-lg text-[15px] cursor-pointer">Send Your Message</button>
+          <button className="bg-[#703BF7] px-[25px] py-[14px] rounded-lg text-[15px] cursor-pointer max-lg:w-full max-lg:mt-8">Send Your Message</button>
         </div>
       </div>
     </div>

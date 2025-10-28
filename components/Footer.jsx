@@ -20,7 +20,7 @@ export default function Footer() {
             <p className="text-[28px] font-bold mb-3">
               Start Your Real Estate Journey Today
             </p>
-            <p className="text-[#999999] text-[14px] mb-6 leading-6">
+            <p className="text-[#999999] text-[14px] mb-6 max-lg:mb-4 leading-6">
               Your dream property is just a click away. Whether you're looking
               for a new home, a strategic investment, or expert real estate
               advice, Estatein is here to assist you every step of the way. Take
@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 bg-transparent max-lg:px-3 max-lg:w-full sm:grid-cols-3 lg:grid-cols-5 gap-8 text-left font-urbanist">
+        <div className="grid grid-cols-2 bg-transparent max-lg:pl-[6%] max-lg:w-full sm:grid-cols-3 lg:grid-cols-5 gap-8 text-left font-urbanist">
           {[
             {
               title: "Home",
@@ -98,10 +98,6 @@ export default function Footer() {
               ],
             },
             {
-              title: "Properties",
-              links: ["Portfolio", "Categories"],
-            },
-            {
               title: "Services",
               links: [
                 "Valuation Mastery",
@@ -110,6 +106,10 @@ export default function Footer() {
                 "Closing Success",
                 "Property Management",
               ],
+            },
+            {
+              title: "Properties",
+              links: ["Portfolio", "Categories"],
             },
             {
               title: "Contact Us",

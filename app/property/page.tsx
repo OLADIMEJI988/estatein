@@ -3,7 +3,7 @@
 import Dropdown from "@/components/Dropdown";
 import ThreeStars from "@/components/ThreeStars";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AvailableProperty from "@/components/AvailableProperty";
 import ReachOut from "@/components/ReachOut";
@@ -145,25 +145,34 @@ export default function Property() {
       price: "$450,000",
       location: "Urban Oasis",
       destination: "Life in the Heart of the City",
-      
     },
   ];
 
   const [startIndex, setStartIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [cardsPerPage, setCardsPerPage] = useState(3);
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setCardsPerPage(window.innerWidth < 1024 ? 1 : 3); // 1 card for mobile (<1024px), 3 for desktop
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleNext = () => {
-    if (startIndex + 3 < properties.length) {
+    if (startIndex + cardsPerPage < properties.length) {
       setDirection(1);
-      setStartIndex(startIndex + 3);
+      setStartIndex((prev) => prev + 1); // ✅ count in 1’s
     }
   };
 
   const handlePrev = () => {
-    if (startIndex - 3 >= 0) {
+    if (startIndex > 0) {
       setDirection(-1);
-      setStartIndex(startIndex - 3);
+      setStartIndex((prev) => prev - 1); // ✅ count in 1’s
     }
   };
 
@@ -174,13 +183,12 @@ export default function Property() {
   };
 
   const totalCards = properties.length;
-  const cardsPerPage = 3;
   const currentCount = Math.min(startIndex + cardsPerPage, totalCards);
 
   return (
     <>
       <div
-        className="font-urbanist relative mb-[170px] border-b border-[#262626] px-[65px] py-[100px]"
+        className="font-urbanist relative mb-[170px] max-lg:mb-0 border-b border-[#262626] px-[65px] max-lg:px-[12px] py-[100px] max-lg:pt-[30px] max-lg:pb-[40px]"
         style={{
           background:
             "linear-gradient(90deg, #1D1D1D 0%, #1B1B1B 3%, transparent 40%)",
@@ -189,7 +197,7 @@ export default function Property() {
         <p className="font-urbanist-semibold text-[38px]">
           Find Your Dream Property
         </p>
-        <p className="text-[#999999] mt-[10px] text-[14px]">
+        <p className="text-[#999999] mt-[10px] text-[14px] max-lg:text-[15px]">
           Welcome to Estatein, where your dream property awaits in every corner
           of our beautiful world. Explore our curated selection of properties,
           each offering a unique story and a chance to redefine your life. With
@@ -197,29 +205,31 @@ export default function Property() {
         </p>
 
         <div className="flex justify-center relative">
-          <div className="p-[9px] bg-[#191919] rounded-t-2xl absolute translate-y-[50px] w-[1000px]">
+          <div className="p-[9px] max-lg:p-1 bg-[#191919] rounded-t-2xl max-lg:rounded-2xl absolute translate-y-[50px] max-lg:translate-y-[65px] w-[1000px] max-lg:w-full">
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search For A Property"
-                className="bg-[#141414] border placeholder:text-[#666666] text-[#999999] border-[#262626] w-full rounded-t-xl tracking-wide px-[20px] py-[23px] pr-[140px] cursor-pointer focus:outline-none focus:border-[#703BF7]"
+                className="bg-[#141414] border placeholder:text-[#666666] text-[#999999] border-[#262626] w-full rounded-t-xl max-lg:rounded-xl tracking-wide px-[20px] py-[23px] max-lg:py-[20px] pr-[140px] cursor-pointer focus:outline-none focus:border-[#703BF7]"
               />
-              <button className="absolute right-[12px] top-1/2 -translate-y-1/2 bg-[#703BF7] py-[13px] px-[15px] flex items-center rounded-lg cursor-pointer">
+              <button className="absolute right-[12px] top-1/2 -translate-y-1/2 bg-[#703BF7] py-[13px] px-[15px] flex max-lg:justify-center items-center rounded-lg cursor-pointer">
                 <Image
-                  className="h-[20px] w-[20px] mr-[6px]"
+                  className="h-[20px] w-[20px] mr-[6px] max-lg:mr-0"
                   src="/whitesearchicon.svg"
                   alt=""
                   width={20}
                   height={20}
                   priority
                 />
-                <p className="text-[14px] tracking-wide">Find Property</p>
+                <p className="text-[14px] tracking-wide max-lg:hidden">
+                  Find Property
+                </p>
               </button>
             </div>
           </div>
 
           {/* Dropdown Filters */}
-          <div className="p-[9px] bg-[#191919] flex rounded-xl z-50 absolute translate-y-[130px] gap-[18px]">
+          <div className="p-[9px] max-lg:p-[16px] max-lg:mt-6 bg-[#191919] flex max-lg:flex-col max-lg:w-full rounded-xl z-50 absolute translate-y-[130px] gap-[18px] max-lg:gap-4">
             {dropdown.map((item, index) => (
               <Dropdown
                 key={index}
@@ -236,14 +246,14 @@ export default function Property() {
         </div>
       </div>
 
-      <div className="mx-[60px] font-urbanist overflow-hidden mb-[120px]">
+      <div className="mx-[60px] max-lg:mx-[12px] max-lg:mt-[555px] font-urbanist overflow-hidden mb-[120px] max-lg:mb-[100px] max-lg:w-full">
         <div className="items-start mr-auto">
           <ThreeStars />
-          <div className="mt-[14px] ml-4 tracking-wide">
-            <p className="text-[38px] font-urbanist-semibold">
+          <div className="mt-[14px] ml-4 max-lg:ml-2 tracking-wide">
+            <p className="text-[38px] max-lg:text-[35px] font-urbanist-semibold">
               Discover a World of Possibilities
             </p>
-            <p className="mt-[10px] text-[#999999] text-[14px] pr-[130px]">
+            <p className="mt-[10px] text-[#999999] text-[14px] max-lg:text-[15px] pr-[130px] max-lg:pr-[12px]">
               Our portfolio of properties is as diverse as your dreams. Explore
               the following categories to find the perfect property that
               resonates with your vision of home
@@ -251,10 +261,10 @@ export default function Property() {
           </div>
 
           {/* Cards */}
-          <div className="flex gap-5 justify-center mx-[60px] mt-12 mb-[34px] relative min-h-[320px]">
+          <div className="flex gap-5 justify-center mx-[60px] max-lg:mx-0 max-lg:mr-[22px] mt-12 mb-[34px] relative min-h-[320px]">
             <AnimatePresence mode="wait" custom={direction}>
               {properties
-                .slice(startIndex, startIndex + 3)
+                .slice(startIndex, startIndex + cardsPerPage)
                 .map((property, idx) => (
                   <motion.div
                     key={property.title + idx + startIndex}
@@ -263,7 +273,11 @@ export default function Property() {
                     initial="enter"
                     animate="center"
                     exit="exit"
-                    transition={{ duration: 0.3, ease: "easeOut", delay: idx * 0.05 }}
+                    transition={{
+                      duration: 0.3,
+                      ease: "easeOut",
+                      delay: idx * 0.05,
+                    }}
                   >
                     <AvailableProperty {...property} />
                   </motion.div>
@@ -271,11 +285,11 @@ export default function Property() {
             </AnimatePresence>
           </div>
 
-          <div className="h-[1px] bg-[#262626] w-full"></div>
+          <div className="h-[1px] bg-[#262626] w-full max-lg:w-[95%] -mt-2 lg:-mt-1"></div>
 
           {/* Navigation */}
           <div className="flex justify-between w-full gap-2 mt-[14px] items-center">
-            <p className="text-white text-sm -mt-3">
+            <p className="text-white text-sm max-lg:text-base -mt-3">
               <span className={startIndex === 0 ? "opacity-40" : "opacity-100"}>
                 {currentCount.toString().padStart(2, "0")}
               </span>{" "}
@@ -290,14 +304,14 @@ export default function Property() {
                 {totalCards.toString().padStart(2, "0")}
               </span>
             </p>
-            <div className="flex gap-2">
+            <div className="flex gap-2 max-lg:gap-3 max-lg:mr-[20px]">
               <button
                 onClick={handlePrev}
                 disabled={startIndex === 0}
                 className="py-[12px] px-[11px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[15.7px] rounded-full"
+                  className="w-[15.7px] max-lg:w-[17px] rounded-full"
                   src="/previous.svg"
                   alt="banner"
                   width={30}
@@ -307,11 +321,11 @@ export default function Property() {
               </button>
               <button
                 onClick={handleNext}
-                disabled={startIndex + cardsPerPage >= properties.length}
+                disabled={startIndex + cardsPerPage >= totalCards}
                 className="p-[8px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[21px] rounded-full"
+                  className="w-[21px] max-lg:w-[23px] rounded-full"
                   src="/next.svg"
                   alt="banner"
                   width={30}

@@ -30,7 +30,7 @@ export default function Value() {
               />
             </div>
 
-            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] max-lg:my-10 mx-4 max-lg:mx-0 bg-[#262626]"></div>
+            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] max-lg:my-5 mx-4 max-lg:mx-0 bg-[#262626]"></div>
 
             <div>
               <EachValue
@@ -42,7 +42,7 @@ export default function Value() {
           </div>
 
           {/* Middle LIne */}
-          <div className="h-[1px] w-full bg-[#262626] my-[24px] max-lg:my-10"></div>
+          <div className="h-[1px] w-full bg-[#262626] my-[24px] max-lg:my-5"></div>
 
           <div className="flex max-lg:flex-col">
             <div>
@@ -53,7 +53,7 @@ export default function Value() {
               />
             </div>
 
-            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] mx-4 max-lg:mx-0 max-lg:my-10 bg-[#262626]"></div>
+            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] mx-4 max-lg:mx-0 max-lg:my-5 bg-[#262626]"></div>
 
             <div>
               <EachValue

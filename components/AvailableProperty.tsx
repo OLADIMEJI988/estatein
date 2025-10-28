@@ -21,7 +21,7 @@ export default function AvailableProperty({
   destination,
 }: CardProps) {
   return (
-    <div className="border font-urbanist border-[#262626] bg-transparent min-w-[357px] rounded-xl px-[23px] pt-7 pb-[26px]">
+    <div className="border font-urbanist border-[#262626] bg-transparent w-[357px] max-lg:w-full rounded-xl px-[23px] max-lg:px-[15px] pt-7 pb-[26px]">
       <div className="cursor-pointer overflow-hidden rounded-lg">
         <Image
           className="w-full transform transition-transform duration-300 hover:scale-108"
