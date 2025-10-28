@@ -6,23 +6,23 @@ interface StepProps {
 
 export default function ExperienceStep({ stepnum, title, subtext }: StepProps) {
   return (
-    <div className="w-[413px] max-lg:w-auto ml-5 max-lg:ml-2 tracking-wide mt-[60px]">
+    <div className="w-[413px] max-lg:w-auto ml-5 max-lg:ml-1 tracking-wide mt-[60px]">
       <div className="border-l-[1.5px] border-[#703BF7] p-4 max-lg:p-5 text-[16px] max-lg:text-2xl">
         {stepnum}
       </div>
 
-      <div className="relative px-9 max-lg:px-11 py-10 h-[220px] max-lg:h-[260px] cursor-pointer flex max-lg:justify-center flex-col group overflow-hidden">
+      <div className="relative px-9 py-10 h-[220px] max-lg:h-[300px] cursor-pointer flex max-lg:justify-center flex-col group overflow-hidden">
         <div
           className="absolute top-0 left-0 w-[200px] h-[200px] max-lg:h-[300px]
             bg-[linear-gradient(135deg,#703BF7_0%,transparent_22%)] 
             opacity-25 pointer-events-none"
         />
 
-        <span className="relative z-10 font-urbanist-semibold text-[20px] max-lg:text-2xl max-lg:mb-1">
+        <span className="relative z-10 font-urbanist-semibold text-[20px] max-lg:text-[25px] max-lg:mb-1">
           {title}
         </span>
 
-        <span className="relative z-10 mt-[16px] text-[13px] max-lg:text-[17px] leading-6 text-[#999999] max-lg:leading-7">
+        <span className="relative z-10 mt-[14px] text-[13px] max-lg:text-[15px] leading-6 text-[#999999] max-lg:leading-7">
           {subtext}
         </span>
 

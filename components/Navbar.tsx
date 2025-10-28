@@ -30,7 +30,7 @@ export default function Navbar() {
 
       {/* Navbar */}
       <div
-        className={`min-w-[540px] border borderbg bg-[#1A1A1A] flex justify-between max-lg:px-4 px-12 items-center py-[14px] max-lg:py-[19px] font-urbanist relative z-50 transition-all duration-300 ${
+        className={`min-w-0 border borderbg bg-[#1A1A1A] flex justify-between max-lg:px-4 px-12 items-center py-[14px] max-lg:py-[19px] font-urbanist relative z-50 transition-all duration-300 ${
           menuOpen ? "max-lg:opacity-0 max-lg:pointer-events-none" : ""
         }`}
       >

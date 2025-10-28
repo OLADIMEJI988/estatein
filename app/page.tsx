@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <div className="font-urbanist flex lg:items-stretch justify-between w-full">
         <div className="bg-[#141414] lg:w-[54vw] flex flex-col justify-center items-center lg:text-start">
-          <div className="lg:hidden w-full my-5 px-5 flex justify-center">
+          <div className="lg:hidden w-full my-5 px-5 max-lg:px-[12px] flex justify-center">
             <Image
               className="w-full h-full object-cover rounded-xl"
               src="/mainimg.svg"
@@ -21,14 +21,14 @@ export default function Home() {
           </div>
 
           <div
-            className="lg:w-[570px] w-full max-w-[100vw] px-5 max-lg:relative max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:w-[100vw] box-border min-w-[540px]"
+            className="lg:w-[570px] w-full max-w-[100vw] px-5 max-lg:px-[12px] max-lg:relative max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:w-[100vw] box-border min-w-0 w-100% max-lg:tracking-wide"
           >
-            <div className="text-5xl font-urbanist-semibold leading-15 mb-5">
+            <div className="text-5xl max-lg:text-[33px] font-urbanist-semibold leading-15 max-lg:leading-12 mb-5">
               <p>Discover Your Dream</p>
               <p>Property with Estatein</p>
             </div>
 
-            <p className="text-[#999999] text-sm max-lg:text-lg">
+            <p className="text-[#999999] text-sm max-lg:text-lg max-lg:-tracking-normal">
               Your journey to finding the perfect property begins here. Explore
               our listings to find the home that matches your dreams.
             </p>
@@ -92,8 +92,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="p-2 bg-[#191919] min-w-[496px] max-lg:mx-5 max-lg:mt-10">
-        <div className="flex max-lg:grid max-lg:grid-cols-2 max-lg:text-center gap-4 justify-center p-4 bg-[#141414] border border-[#262626]">
+      <div className="p-2 max-lg:p-1 bg-[#191919] min-w-0 max-lg:mx-[12px] max-lg:mt-10">
+        <div className="flex max-lg:grid max-lg:grid-cols-2 max-lg:text-center gap-4 max-lg:gap-3 justify-center p-4 bg-[#141414] border border-[#262626]">
           <Card img="/home.svg" text="Find Your Dream Home" />
           <Card img="/camera.svg" text="Unlock Property Value" />
           <Card img="/property.svg" text="Effortless Property Management" />

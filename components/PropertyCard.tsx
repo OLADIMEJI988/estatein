@@ -14,7 +14,7 @@ export default function PropertyCard({
   moretext,
 }: CardProps) {
   return (
-    <div className="border border-[#262626] bg-transparent w-[370px] max-lg:min-w-[500px] h-[500px] max-lg:h-[600px] rounded-xl px-[23px] pt-7 pb-[26px] flex flex-col justify-between">
+    <div className="border border-[#262626] bg-transparent w-[370px] max-lg:w-full h-[500px] max-lg:h-[600px] rounded-xl px-[23px] max-lg:px-[19px] pt-7 pb-[26px] flex flex-col justify-between">
       <div className="cursor-pointer overflow-hidden rounded-lg">
         <Image
           className="w-full transform transition-transform duration-300 hover:scale-110"
@@ -27,11 +27,11 @@ export default function PropertyCard({
       </div>
 
       <div className="mt-4">
-        <p className="mb-[5px] font-semibold text-white max-lg:text-[19px]">
+        <p className="mb-[5px] font-semibold text-white max-lg:text-[25px]">
           {title}
         </p>
         <div className="flex text-[12px] relative gap-[7px] items-center">
-          <p className="text-[#999999] text-[12px] max-lg:text-[14px]">
+          <p className="text-[#999999] text-[12px] max-lg:text-[16px]">
             {subtext}
           </p>
           <p className="max-lg:hidden mt-4 underline cursor-pointer left-37 absolute">
@@ -40,8 +40,8 @@ export default function PropertyCard({
         </div>
       </div>
 
-      <div className="flex mt-5 gap-2">
-        <div className="flex items-center gap-[3px] justify-center border border-[#262626] bg-[#191919] rounded-2xl px-3 max-lg:px-4 py-[7px]">
+      <div className="flex max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 mt-5 max-lg:mt-6 gap-2">
+        <div className="flex items-center gap-[3px] justify-center border border-[#262626] bg-[#191919] rounded-2xl max-lg:rounded-full px-3 max-lg:px-4 py-[7px] max-lg:py-[9px]">
           <Image
             className="w-[16px] max-lg:w-[18px]"
             src="/bedroom.svg"
@@ -50,10 +50,10 @@ export default function PropertyCard({
             height={20}
             priority
           />
-          <p className="text-[12px] max-lg:text-[15px]">4-Bedroom</p>
+          <p className="text-[12px] max-lg:text-[14px]">4-Bedroom</p>
         </div>
 
-        <div className="flex items-center gap-[3px] justify-center border border-[#262626] bg-[#191919] rounded-2xl px-3 max-lg:px-4 py-[7px]">
+        <div className="flex items-center gap-[3px] justify-center border border-[#262626] bg-[#191919] rounded-2xl max-lg:rounded-full px-3 max-lg:px-4 py-[7px] max-lg:py-[9px]">
           <Image
             className="w-[16px] max-lg:w-[18px]"
             src="/bathroom.svg"
@@ -62,10 +62,10 @@ export default function PropertyCard({
             height={20}
             priority
           />
-          <p className="text-[12px] max-lg:text-[15px]">3-Bathroom</p>
+          <p className="text-[12px] max-lg:text-[14px]">3-Bathroom</p>
         </div>
 
-        <div className="flex items-center gap-[3px] justify-center border border-[#262626] bg-[#191919] rounded-2xl px-3 max-lg:px-4 py-[7px]">
+        <div className="flex items-center gap-[3px] justify-center border border-[#262626] bg-[#191919] rounded-2xl max-lg:rounded-full px-3 max-lg:px-4 py-[7px] max-lg:py-[9px]">
           <Image
             className="w-[16px] max-lg:w-[18px]"
             src="/villa.svg"
@@ -74,7 +74,7 @@ export default function PropertyCard({
             height={20}
             priority
           />
-          <p className="text-[12px] max-lg:text-[15px]">Villa</p>
+          <p className="text-[12px] max-lg:text-[14px]">Villa</p>
         </div>
       </div>
 

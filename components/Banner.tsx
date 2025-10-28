@@ -18,7 +18,7 @@ export default function Banner() {
 
   return (
     <div
-      className={`overflow-hidden min-w-[540px] bg-[#1A1A1A] transition-all duration-500 ${
+      className={`overflow-hidden min-w-0 bg-[#1A1A1A] transition-all duration-500 ${
         isClosing
           ? "max-h-0 opacity-0 -translate-y-5"
           : "max-h-20 opacity-100 translate-y-0"
@@ -35,16 +35,16 @@ export default function Banner() {
         />
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className="text-white ml-auto tracking-wide text-[13px] max-lg:text-[15px] text-center">
+          <p className="text-white ml-auto tracking-wide text-[13px] max-lg:text-[11px] text-center">
             ✨ Discover Your Dream Property with Estatein
           </p>
 
-          <p className="text-white ml-3 underline cursor-pointer tracking-wide text-[13px] text-center">
+          <p className="text-white ml-3 underline cursor-pointer tracking-wide text-[13px] max-lg:text-[12px] text-center">
             Learn More
           </p>
 
           <div
-            className="p-[5px] max-lg:p-[8px] ml-auto mr-6 bg-[#303030] hover:bg-[#141414] smooth-transition cursor-pointer rounded-full"
+            className="p-[5px] max-lg:p-[8px] ml-auto mr-6 max-lg:mr-2 bg-[#303030] hover:bg-[#141414] smooth-transition cursor-pointer rounded-full"
             onClick={handleClose}
           >
             <Image

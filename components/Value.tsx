@@ -20,7 +20,7 @@ export default function Value() {
       </div>
 
       <div className="p-2 bg-[#191919] rounded-xl w-full">
-        <div className="border border-[#262626] p-[48px] bg-[#141414] rounded-xl">
+        <div className="border border-[#262626] p-[48px] max-lg:px-[30px] max-lg:py-[35px] bg-[#141414] rounded-xl">
           <div className="flex max-lg:flex-col">
             <div>
               <EachValue

@@ -10,7 +10,7 @@ import ValuedClients from "@/components/ValuedClients";
 
 export default function About() {
   return (
-    <div className="font-urbanist mt-[20px] lg:mt-[70px] mb-[120px] max-w-[1200px] max-lg:min-w-[540px] mx-auto px-4 overflow-hidden">
+    <div className="font-urbanist mt-[20px] lg:mt-[70px] mb-[120px] max-w-[1200px] max-lg:w-full mx-auto px-4 max-lg:px-[12px] overflow-hidden">
       <div className="flex items-center gap-[40px] max-lg:flex-col-reverse max-lg:gap-10">
         <div className="items-start mr-auto max-lg:mr-0">
           <div className="flex justify-start">
@@ -30,7 +30,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="flex gap-[17px] ml-5 mt-[55px] max-lg:ml-2 max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 max-lg:justify-center max-lg:mt-8">
+          <div className="flex gap-[17px] ml-5 mt-[55px] max-lg:ml-0 max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 max-lg:justify-center max-lg:mt-8">
             <div className="border border-[#262626] bg-[#191919] p-[13px] max-lg:p-0 max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:h-32 w-[157px] rounded-lg max-lg:w-full text-center">
               <p className="font-urbanist-semibold text-2xl max-lg:text-4xl">
                 200+
@@ -60,9 +60,9 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex justify-end max-lg:justify-center w-auto max-lg:h-[420px] max-lg:border max-lg:border-[#262626] max-lg:rounded-xl">
+        <div className="flex justify-end max-lg:justify-center w-auto max-lg:h-[320px] max-lg:border max-lg:border-[#262626] max-lg:rounded-xl">
           <Image
-            className="w-[580px] h-full object-cover max-lg:w-full max-lg:h-[420px]  max-lg:rounded-xl"
+            className="w-[580px] h-full object-cover max-lg:w-full max-lg:h-[320px] max-lg:rounded-xl"
             src="/houseonhand.svg"
             alt="banner"
             width={580}

@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1A1A1A;
+  --foreground: #1a1a1a;
 }
 
 @theme inline {
@@ -15,8 +15,15 @@
   :root {
     --background: #141414;
     --foreground: #ededed;
-
   }
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -46,15 +53,14 @@ body {
 }
 
 #nprogress .bar {
-  background: #703BF7 !important;
-  height: 3px; 
+  background: #703bf7 !important;
+  height: 3px;
 }
 
 #nprogress .bar {
-  box-shadow: 0 0 10px #703BF7, 0 0 5px #703BF7;
+  box-shadow: 0 0 10px #703bf7, 0 0 5px #703bf7;
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px #703BF7, 0 0 5px #703BF7;
+  box-shadow: 0 0 10px #703bf7, 0 0 5px #703bf7;
 }
-

@@ -19,7 +19,7 @@ export default function EstateinExperience() {
         </div>
       </div>
 
-      <div className="flex max-lg:flex-col max-lg:min-w-full">
+      <div className="flex max-lg:flex-col max-lg:w-full">
         <ExperienceStep
           stepnum="Step 01"
           title="Discover a World of Possibilities"

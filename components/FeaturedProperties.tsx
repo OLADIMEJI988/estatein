@@ -120,7 +120,7 @@ export default function FeaturedProperties() {
   const currentCount = Math.min(startIndex + cardsPerPage, totalCards);
 
   return (
-    <div className="w-full my-[60px] font-urbanist flex justify-center px-4 md:px-8 lg:px-12">
+    <div className="w-full my-[60px] font-urbanist flex justify-center px-[12px] md:px-8 lg:px-12">
       <div className="w-full max-w-[1280px]">
         <ThreeStars />
 
@@ -129,7 +129,7 @@ export default function FeaturedProperties() {
             Featured Properties
           </p>
 
-          <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-2 max-lg:min-w-[500px]">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-2 max-lg:w-full">
             <p className="text-[#999999] text-[17px] lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
               Explore our handpicked selection of featured properties. Each
               listing offers a glimpse into exceptional homes and investments
@@ -177,10 +177,10 @@ export default function FeaturedProperties() {
           </div>
            
           {/* Divider */}
-          <div className="h-[1px] bg-[#262626] w-full max-lg:min-w-[500px] lg:-mt-1"></div>
+          <div className="h-[1px] bg-[#262626] w-full max-lg:min-w-0 lg:-mt-1"></div>
 
           {/* Navigation */}
-          <div className="flex max-lg:min-w-[500px] justify-between w-full gap-4 mt-[14px] items-center">
+          <div className="flex max-lg:min-w-0 justify-between w-full gap-4 mt-[14px] items-center">
             {/* Counter */}
             <p className="text-white text-sm max-lg:text-base">
               <span className={startIndex === 0 ? "opacity-40" : "opacity-100"}>

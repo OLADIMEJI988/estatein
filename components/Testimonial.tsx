@@ -139,11 +139,11 @@ export default function Testimonial() {
   const currentCount = Math.min(startIndex + cardsPerPage, totalCards);
 
   return (
-    <div className="w-full my-[60px] font-urbanist flex justify-center px-4 md:px-8 lg:px-12">
+    <div className="w-full my-[60px] font-urbanist flex justify-center px-[12px] md:px-8 lg:px-12">
       <div className="w-full max-w-[1280px]">
         <ThreeStars />
 
-        <div className="mt-[14px] lg:ml-4 max-lg:min-w-[500px]">
+        <div className="mt-[14px] lg:ml-4 max-lg:w-full">
           <p className="text-4xl font-semibold text-white max-lg:ml-2">
             What Our Clients Say
           </p>

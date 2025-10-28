@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <>
-      <div className="relative font-urbanist border border-[#262626] flex flex-col justify-center lg:overflow-hidden max-lg:min-w-[540px] max-lg:h-[530px]">
+      <div className="relative font-urbanist border border-[#262626] flex flex-col justify-center lg:overflow-hidden max-lg:w-full max-lg:h-[530px]">
         <div className="flex max-lg:flex-col justify-between -mt-[60px] max-lg:-mt-0">
           <div className="max-lg:scale-y-[-1]">
             <TilesSvg />
@@ -17,10 +17,10 @@ export default function Footer() {
 
         <div className="absolute inset-0 flex flex-col lg:flex-row justify-center items-center text-center lg:text-left h-auto lg:h-[200px] mt-0 lg:mt-10 mx-4 sm:mx-8 lg:mx-14 px-6 gap-6">
           <div className="max-w-3xl mr-auto">
-            <p className="text-[35px] lg:text-[28px] font-bold mb-3">
+            <p className="text-[28px] font-bold mb-3">
               Start Your Real Estate Journey Today
             </p>
-            <p className="text-[#999999] text-[18px] lg:text-[14px] mb-6 leading-6">
+            <p className="text-[#999999] text-[14px] mb-6 leading-6">
               Your dream property is just a click away. Whether you're looking
               for a new home, a strategic investment, or expert real estate
               advice, Estatein is here to assist you every step of the way. Take
@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Links */}
-      <div className="py-10 sm:py-[65px] tracking-wide flex flex-col lg:flex-row bg-[#141414] px-6 sm:px-10 lg:px-[75px] gap-10 lg:gap-20 max-lg:min-w-[535px]">
+      <div className="py-10 sm:py-[65px] tracking-wide flex flex-col lg:flex-row bg-[#141414] px-6 sm:px-10 lg:px-[75px] gap-10 lg:gap-20 max-lg:w-full">
         {/* Left Section */}
         <div className="mr-auto">
           <div className="flex items-center">
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Email Field */}
-          <div className="flex font-urbanist w-full sm:w-72 items-center border border-[#262626] focus-within:border-[#703BF7] tracking-wide py-3 max-lg:py-5 px-3 max-lg:px-5 mt-5 rounded-lg mx-auto lg:mx-0 max-lg:min-w-[500px] transition-colors duration-200 group">
+          <div className="flex font-urbanist w-full sm:w-72 items-center border border-[#262626] focus-within:border-[#703BF7] tracking-wide py-3 max-lg:py-5 px-3 max-lg:px-5 mt-5 rounded-lg mx-auto lg:mx-0 max-lg:w-full transition-colors duration-200 group">
             <Image
               className="h-[17px] max-lg:h-[27px]"
               src="/email.svg"
@@ -133,7 +133,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="py-4 font-urbanist tracking-wide flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 px-6 sm:px-10 lg:px-[75px] bg-[#191919] text-center sm:text-left max-lg:min-w-[540px]">
+      <div className="py-4 font-urbanist tracking-wide flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 px-6 sm:px-10 lg:px-[75px] bg-[#191919] text-center sm:text-left max-lg:w-full">
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 sm:text-[11px] text-[12px] tracking-wide justify-center sm:justify-start">
           <p>@2023 Estatein. All Rights Reserved.</p>
           <p>Terms & Conditions</p>

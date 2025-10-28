@@ -18,7 +18,7 @@ export default function EstateinTeam() {
           </p>
         </div>
 
-        <div className="flex max-lg:flex-col mt-[60px] ml-5 max-lg:ml-2 gap-[20px] max-lg:gap-[40px]">
+        <div className="flex max-lg:flex-col mt-[60px] ml-5 max-lg:ml-1 gap-[20px] max-lg:gap-[40px]">
            <Representative img="/max.svg" name="Max Mitchell" role="Founder" />
            <Representative img="/sarah.svg" name="Sarah Johnson" role="Chief Real Estate Officer" />
            <Representative img="/david.svg" name="David Brown" role="Head of Property Management" />
