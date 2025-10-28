@@ -108,12 +108,12 @@ export default function FAQ() {
         <ThreeStars />
 
         <div className="mt-[14px] lg:ml-4 max-lg:min-w-[500px]">
-          <p className="text-4xl font-semibold text-white max-lg:ml-4">
+          <p className="text-4xl font-semibold text-white max-lg:ml-2">
             Frequently Asked Questions
           </p>
 
-          <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-4">
-            <p className="text-[#999999] text-base lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-2">
+            <p className="text-[#999999] text-[17px] lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
               Find answers to common questions about Estatein&apos;s services,
               property listings, and the real estate process. We&apos;re here to
               provide clarity and assist you every step of the way.

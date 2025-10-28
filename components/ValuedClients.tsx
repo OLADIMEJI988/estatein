@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import ThreeStars from "./ThreeStars";
@@ -16,7 +16,6 @@ export default function ValuedClients() {
       feedback:
         "Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.",
     },
-
     {
       year: "2018",
       corpname: "GreenTech Enterprises",
@@ -24,51 +23,65 @@ export default function ValuedClients() {
       feedback:
         "Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.",
     },
-
     {
       year: "2020",
       corpname: "Skyline Developers",
       category: "Commercial Office",
       feedback:
-        "Working with Estatein streamlined our search for premium office spaces. Their market insights saved us valuable time and resources."
+        "Working with Estatein streamlined our search for premium office spaces. Their market insights saved us valuable time and resources.",
     },
     {
       year: "2021",
       corpname: "UrbanNest Properties",
       category: "Residential Complex",
       feedback:
-        "Estatein’s expertise in residential planning gave us confidence. Their recommendations aligned perfectly with our long-term vision."
+        "Estatein’s expertise in residential planning gave us confidence. Their recommendations aligned perfectly with our long-term vision.",
     },
     {
       year: "2019",
       corpname: "Harbor Logistics",
       category: "Industrial Warehouse",
       feedback:
-        "From site selection to final acquisition, Estatein provided unmatched guidance. They played a vital role in expanding our logistics network."
+        "From site selection to final acquisition, Estatein provided unmatched guidance. They played a vital role in expanding our logistics network.",
     },
     {
       year: "2022",
       corpname: "BlueWave Hospitality",
       category: "Hotel & Leisure",
       feedback:
-        "Estatein’s deep understanding of hospitality real estate allowed us to secure a location that boosted our occupancy rates significantly."
-    }
-    
+        "Estatein’s deep understanding of hospitality real estate allowed us to secure a location that boosted our occupancy rates significantly.",
+    },
   ];
+
   const [startIndex, setStartIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [cardsPerPage, setCardsPerPage] = useState(2);
+
+  useEffect(() => {
+    const updateCardsPerPage = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerPage(1);
+      } else {
+        setCardsPerPage(2);
+      }
+    };
+
+    updateCardsPerPage();
+    window.addEventListener("resize", updateCardsPerPage);
+    return () => window.removeEventListener("resize", updateCardsPerPage);
+  }, []);
 
   const handleNext = () => {
-    if (startIndex + 2 < clients.length) {
+    if (startIndex + cardsPerPage < clients.length) {
       setDirection(1);
-      setStartIndex(startIndex + 2);
+      setStartIndex(startIndex + cardsPerPage);
     }
   };
 
   const handlePrev = () => {
-    if (startIndex - 2 >= 0) {
+    if (startIndex - cardsPerPage >= 0) {
       setDirection(-1);
-      setStartIndex(startIndex - 2);
+      setStartIndex(startIndex - cardsPerPage);
     }
   };
 
@@ -88,18 +101,18 @@ export default function ValuedClients() {
   };
 
   const totalCards = clients.length;
-  const cardsPerPage = 2;
   const currentCount = Math.min(startIndex + cardsPerPage, totalCards);
+
   return (
     <div className="mt-[100px]">
       <div className="items-start mr-auto">
         <ThreeStars />
 
-        <div className="mt-[14px] ml-4 tracking-wide">
+        <div className="mt-[14px] ml-4 max-lg:ml-2 tracking-wide">
           <p className="text-[38px] font-urbanist-semibold">
             Our Valued Clients
           </p>
-          <p className="mt-[10px] text-[#999999] text-[15px] pr-[130px]">
+          <p className="mt-[10px] text-[#999999] text-[15px] max-lg:text-[17px] pr-[130px] max-lg:pr-0">
             At Estatein, we have had the privilege of working with a diverse
             range of clients across various industries. Here are some of the
             clients we&apos;ve had the pleasure of serving
@@ -108,9 +121,9 @@ export default function ValuedClients() {
 
         <div>
           {/* Cards */}
-          <div className="flex gap-5 justify-center mt-12 mb-[32.5px] relative">
+          <div className="flex gap-5 justify-center mt-12 mb-[32.5px] relative flex-wrap">
             <AnimatePresence mode="wait" custom={direction}>
-              {clients.slice(startIndex, startIndex + 2).map((client, idx) => {
+              {clients.slice(startIndex, startIndex + cardsPerPage).map((client, idx) => {
                 const exitDelay = idx * 0.05;
                 return (
                   <motion.div
@@ -159,7 +172,6 @@ export default function ValuedClients() {
               </span>
             </p>
 
-            {/* Navigation buttons */}
             <div className="flex gap-2">
               <button
                 onClick={handlePrev}
@@ -169,7 +181,7 @@ export default function ValuedClients() {
                 <Image
                   className="w-[15.7px] rounded-full"
                   src="/previous.svg"
-                  alt="banner"
+                  alt="prev"
                   width={30}
                   height={20}
                   priority
@@ -183,7 +195,7 @@ export default function ValuedClients() {
                 <Image
                   className="w-[21px] rounded-full"
                   src="/next.svg"
-                  alt="banner"
+                  alt="next"
                   width={30}
                   height={20}
                   priority

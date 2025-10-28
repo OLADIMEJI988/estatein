@@ -144,12 +144,12 @@ export default function Testimonial() {
         <ThreeStars />
 
         <div className="mt-[14px] lg:ml-4 max-lg:min-w-[500px]">
-          <p className="text-4xl font-semibold text-white max-lg:ml-4">
+          <p className="text-4xl font-semibold text-white max-lg:ml-2">
             What Our Clients Say
           </p>
 
-          <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-4">
-            <p className="text-[#999999] text-base lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-2">
+            <p className="text-[#999999] text-[17px] lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
               Read the success stories and heartfelt testimonials from our
               valued clients. Discover why they chose Estatein for their real
               estate needs.

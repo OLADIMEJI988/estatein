@@ -7,7 +7,7 @@ interface CardProps {
 
 export default function Card({ img, text }: CardProps) {
   return (
-    <div className="bg-[#191919] max-lg:w-full font-urbanist relative border border-[#262626] w-72 h-36 max-lg:h-[165px] rounded-xl">
+    <div className="bg-[#191919] max-lg:w-full font-urbanist relative border border-[#262626] w-72 h-36 max-lg:h-[175px] rounded-xl">
       <Image
         className="w-6 h-6 absolute top-3 right-3"
         src="/greyarrow.svg"
@@ -20,7 +20,7 @@ export default function Card({ img, text }: CardProps) {
       <div className="flex flex-col items-center gap-4 mt-5 max-lg:mt-7">
         <div>
           <Image
-            className="w-[62px] h-auto"
+            className="w-[62px] max-lg:w-[65px] h-auto"
             src={img}
             alt="home"
             width={62}

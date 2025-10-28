@@ -125,12 +125,12 @@ export default function FeaturedProperties() {
         <ThreeStars />
 
         <div className="mt-[14px] lg:ml-4">
-          <p className="text-4xl font-semibold text-white max-lg:ml-4">
+          <p className="text-4xl font-semibold text-white max-lg:ml-2">
             Featured Properties
           </p>
 
-          <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-4 max-lg:min-w-[500px]">
-            <p className="text-[#999999] text-base lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-2 max-lg:min-w-[500px]">
+            <p className="text-[#999999] text-[17px] lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
               Explore our handpicked selection of featured properties. Each
               listing offers a glimpse into exceptional homes and investments
               available through Estatein. Click &quot;View Details&quot; for more

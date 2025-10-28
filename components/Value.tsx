@@ -5,13 +5,13 @@ import ThreeStars from "./ThreeStars";
 
 export default function Value() {
   return (
-    <div className="flex items-center gap-[30px] mt-[120px]">
-      <div className="items-start mr-[5px]">
+    <div className="flex max-lg:flex-col items-center gap-[30px] mt-[120px] max-lg:mt-[110px]">
+      <div className="items-start mr-[5px] max-lg:items-center max-lg:w-full">
         <ThreeStars />
         
-        <div className="mt-[14px] ml-4 tracking-wide">
+        <div className="mt-[14px] ml-4 max-lg:ml-2 tracking-wide">
           <p className="text-[38px] font-urbanist-semibold">Our Values</p>
-          <p className="mt-[10px] text-[#999999] text-[15px] w-[400px]">
+          <p className="mt-[10px] text-[#999999] text-[15px] max-lg:text-[17px] w-[400px] max-lg:w-full">
             Our story is one of continuous growth and evolution. We started as a
             small team with big dreams, determined to create a real estate
             platform that transcended the ordinary.
@@ -21,7 +21,7 @@ export default function Value() {
 
       <div className="p-2 bg-[#191919] rounded-xl w-full">
         <div className="border border-[#262626] p-[48px] bg-[#141414] rounded-xl">
-          <div className="flex">
+          <div className="flex max-lg:flex-col">
             <div>
               <EachValue
                 img="/purplestar.svg"
@@ -30,7 +30,7 @@ export default function Value() {
               />
             </div>
 
-            <div className="w-[1px] h-[120px] mx-4 bg-[#262626]"></div>
+            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] max-lg:my-10 mx-4 bg-[#262626]"></div>
 
             <div>
               <EachValue
@@ -42,9 +42,9 @@ export default function Value() {
           </div>
 
           {/* Middle LIne */}
-          <div className="h-[1px] w-full bg-[#262626] my-[24px]"></div>
+          <div className="h-[1px] w-full bg-[#262626] my-[24px] max-lg:my-10"></div>
 
-          <div className="flex">
+          <div className="flex max-lg:flex-col">
             <div>
               <EachValue
                 img="/purpleclient.svg"
@@ -53,7 +53,7 @@ export default function Value() {
               />
             </div>
 
-            <div className="w-[1px] h-[120px] mx-4 bg-[#262626]"></div>
+            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] mx-4 max-lg:my-10 bg-[#262626]"></div>
 
             <div>
               <EachValue

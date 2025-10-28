@@ -26,7 +26,7 @@ export default function Banner() {
     >
       <div className="relative w-full font-urbanist">
         <Image
-          className="w-full h-11 max-lg:h-12 object-cover"
+          className="w-full h-11 max-lg:h-14 object-cover"
           src="/Abstract Design.svg"
           alt="banner"
           width={700}
@@ -44,7 +44,7 @@ export default function Banner() {
           </p>
 
           <div
-            className="p-[5px] ml-auto mr-6 bg-[#303030] hover:bg-[#141414] smooth-transition cursor-pointer rounded-full"
+            className="p-[5px] max-lg:p-[8px] ml-auto mr-6 bg-[#303030] hover:bg-[#141414] smooth-transition cursor-pointer rounded-full"
             onClick={handleClose}
           >
             <Image

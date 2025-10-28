@@ -34,29 +34,29 @@ export default function Home() {
             </p>
 
             <div className="flex max-lg:flex-col max-lg:justify-center my-9 max-lg:my-10 gap-4 max-lg:gap-5">
-              <button className="bg-[#141414] border border-[#262626] px-[14px] py-[14px] max-lg:py-5 rounded-lg w-full max-sm:max-w-[540px]">
+              <button className="bg-[#141414] border border-[#262626] px-[14px] py-[14px] max-lg:py-6 rounded-lg w-full max-sm:max-w-[540px] max-lg:text-[17px]">
                 Learn More
               </button>
-              <button className="px-[14px] py-[15px] max-lg:py-5 bg-[#703BF7] rounded-lg w-full max-sm:max-w-[540px]">
+              <button className="px-[14px] py-[15px] max-lg:py-6 bg-[#703BF7] rounded-lg w-full max-sm:max-w-[540px] max-lg:text-[17px]">
                 Browse Properties
               </button>
             </div>
 
             <div className="flex max-lg:grid max-lg:grid-cols-2 gap-3 w-full">
-              <div className="w-full max-lg:h-[110px] max-lg:p-5 border border-[#262626] bg-[#191919] p-[13px] rounded-lg text-center lg:text-start">
-                <p className="font-urbanist-semibold text-2xl max-lg:text-3xl">
+              <div className="w-full max-lg:h-32 max-lg:p-0 max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center border border-[#262626] bg-[#191919] p-[13px] rounded-lg text-center lg:text-start">
+                <p className="font-urbanist-semibold text-2xl max-lg:text-4xl">
                   200+
                 </p>
-                <p className="text-[#999999] text-[12px] max-lg:text-[14px] mt-[6px]">
+                <p className="text-[#999999] text-[12px] max-lg:text-[15px] mt-[6px]">
                   Happy Customers
                 </p>
               </div>
 
-              <div className="w-full max-lg:h-[110px] max-lg:p-5 border border-[#262626] bg-[#191919] p-[13px] rounded-lg text-center lg:text-start">
-                <p className="font-urbanist-semibold text-2xl max-lg:text-3xl">
+              <div className="w-full max-lg:h-32 max-lg:p-0 max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center border border-[#262626] bg-[#191919] p-[13px] rounded-lg text-center lg:text-start">
+                <p className="font-urbanist-semibold text-2xl max-lg:text-4xl">
                   10k+
                 </p>
-                <p className="text-[#999999] text-[12px] max-lg:text-[14px] mt-[6px]">
+                <p className="text-[#999999] text-[12px] max-lg:text-[15px] mt-[6px]">
                   Properties For Clients
                 </p>
               </div>
@@ -69,11 +69,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:hidden w-full mt-3 h-[110px] p-5 border border-[#262626] bg-[#191919] text-center rounded-lg">
-              <p className="font-urbanist-semibold text-2xl max-lg:text-3xl">
+            <div className="lg:hidden w-full mt-3 h-32 flex flex-col justify-center items-center border border-[#262626] bg-[#191919] text-center rounded-lg">
+              <p className="font-urbanist-semibold text-2xl max-lg:text-4xl">
                 16+
               </p>
-              <p className="text-[#999999] text-[12px] max-lg:text-[14px] mt-[6px]">
+              <p className="text-[#999999] text-[12px] max-lg:text-[15px] mt-[6px]">
                 Years of Experience
               </p>
             </div>

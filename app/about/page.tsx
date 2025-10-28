@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Value from "@/components/Value";
@@ -10,15 +10,18 @@ import ValuedClients from "@/components/ValuedClients";
 
 export default function About() {
   return (
-    <div className="font-urbanist mt-[70px] mb-[120px] max-w-[1200px] mx-auto px-4 overflow-hidden">
+    <div className="font-urbanist mt-[20px] lg:mt-[70px] mb-[120px] max-w-[1200px] max-lg:min-w-[540px] mx-auto px-4 overflow-hidden">
+      <div className="flex items-center gap-[40px] max-lg:flex-col-reverse max-lg:gap-10">
+        <div className="items-start mr-auto max-lg:mr-0">
+          <div className="flex justify-start">
+            <ThreeStars />
+          </div>
 
-      <div className="flex items-center gap-[40px]">
-        <div className="items-start mr-auto">
-          <ThreeStars />
-
-          <div className="mt-[14px] ml-4 tracking-wide">
-            <p className="text-[38px] font-urbanist-semibold">Our Journey</p>
-            <p className="mt-[10px] text-[#999999] text-[15px] w-[550px]">
+          <div className="mt-[14px] ml-4 tracking-wide max-lg:ml-2">
+            <p className="text-[38px] font-urbanist-semibold">
+              Our Journey
+            </p>
+            <p className="mt-[10px] text-[#999999] text-[15px] leading-relaxed w-[550px] max-lg:w-full max-lg:text-[17px] mx-auto max-lg:mx-0">
               Our story is one of continuous growth and evolution. We started as
               a small team with big dreams, determined to create a real estate
               platform that transcended the ordinary. Over the years, we&apos;ve
@@ -27,50 +30,67 @@ export default function About() {
             </p>
           </div>
 
-          <div className="flex gap-[17px] ml-5 mt-[55px]">
-            <div className="border border-[#262626] bg-[#191919] p-[13px] w-[157px] rounded-lg">
-              <p className="font-urbanist-semibold text-2xl">200+</p>
-              <p className="text-[#999999] text-[12px] mt-[6px]">
+          <div className="flex gap-[17px] ml-5 mt-[55px] max-lg:ml-2 max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 max-lg:justify-center max-lg:mt-8">
+            <div className="border border-[#262626] bg-[#191919] p-[13px] max-lg:p-0 max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:h-32 w-[157px] rounded-lg max-lg:w-full text-center">
+              <p className="font-urbanist-semibold text-2xl max-lg:text-4xl">
+                200+
+              </p>
+              <p className="text-[#999999] text-[12px] max-lg:text-[15px] mt-[6px]">
                 Happy Customers
               </p>
             </div>
-            <div className="border border-[#262626] bg-[#191919] p-[13px] w-[157px] rounded-lg">
-              <p className="font-urbanist-semibold text-2xl">10k+</p>
-              <p className="text-[#999999] text-[12px] mt-[6px]">
+
+            <div className="border border-[#262626] bg-[#191919] p-[13px] max-lg:p-0 max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:h-32 w-[157px] rounded-lg max-lg:w-full text-center">
+              <p className="font-urbanist-semibold text-2xl max-lg:text-4xl">
+                10k+
+              </p>
+              <p className="text-[#999999] text-[12px] max-lg:text-[15px] mt-[6px]">
                 Properties For Clients
               </p>
             </div>
-            <div className="border border-[#262626] bg-[#191919] p-[13px] w-[157px] rounded-lg">
-              <p className="font-urbanist-semibold text-2xl">16+</p>
-              <p className="text-[#999999] text-[12px] mt-[6px]">
+
+            <div className="border border-[#262626] bg-[#191919] p-[13px] max-lg:p-0 max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:h-32 w-[157px] rounded-lg max-lg:w-full text-center max-lg:col-span-2">
+              <p className="font-urbanist-semibold text-2xl max-lg:text-4xl">
+                16+
+              </p>
+              <p className="text-[#999999] text-[12px] max-lg:text-[15px] mt-[6px]">
                 Years of Experience
               </p>
             </div>
           </div>
         </div>
 
-        <div>
+        <div className="flex justify-end max-lg:justify-center w-auto max-lg:h-[420px] max-lg:border max-lg:border-[#262626] max-lg:rounded-xl">
           <Image
-            className="w-[580px] h-full object-cover"
+            className="w-[580px] h-full object-cover max-lg:w-full max-lg:h-auto max-lg:rounded-xl"
             src="/houseonhand.svg"
             alt="banner"
-            width={300}
-            height={200}
+            width={580}
+            height={400}
             priority
           />
         </div>
       </div>
 
-      <Value />
+      <div>
+        <Value />
+      </div>
 
-      <Achievements />
+      <div>
+        <Achievements />
+      </div>
 
-      <EstateinExperience />
+      <div>
+        <EstateinExperience />
+      </div>
 
-      <EstateinTeam />
+      <div>
+        <EstateinTeam />
+      </div>
 
-      <ValuedClients />
-
+      <div>
+        <ValuedClients />
+      </div>
     </div>
   );
 }
