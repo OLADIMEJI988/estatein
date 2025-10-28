@@ -8,10 +8,10 @@ export default function EstateinExperience() {
         <ThreeStars />
 
         <div className="mt-[14px] ml-4 max-lg:ml-2 tracking-wide">
-          <p className="text-[38px] font-urbanist-semibold">
+          <p className="text-[38px] max-lg:text-[35px] font-urbanist-semibold">
             Navigating the Estatein Experience
           </p>
-          <p className="mt-[10px] text-[#999999] text-[15px] max-lg:text-[17px] pr-[130px] max-lg:pr-0">
+          <p className="mt-[10px] text-[#999999] text-[15px] pr-[130px] max-lg:pr-0">
             At Estatein, we&apos;ve designed a straightforward process to help you
             find and purchase your dream property with ease. Here&apos;s a
             step-by-step guide to how it all works.
@@ -19,7 +19,7 @@ export default function EstateinExperience() {
         </div>
       </div>
 
-      <div className="flex max-lg:flex-col max-lg:w-full">
+      <div className="flex max-lg:flex-col max-lg:w-full max-lg:mt-[10px]">
         <ExperienceStep
           stepnum="Step 01"
           title="Discover a World of Possibilities"

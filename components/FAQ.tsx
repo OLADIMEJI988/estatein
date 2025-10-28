@@ -9,11 +9,6 @@ import ThreeStars from "./ThreeStars";
 export default function FAQ() {
   const faq = [
     {
-      title: "How do I search for properties on Estatein?",
-      subtext:
-        "Learn how to use our user-friendly search tools to find properties that match your criteria.",
-    },
-    {
       title: "What documents do I need to sell my property through Estatein?",
       subtext:
         "Find out about the necessary documentation for listing your property with us.",
@@ -22,6 +17,11 @@ export default function FAQ() {
       title: "How can I contact an Estatein agent?",
       subtext:
         "Discover the different ways you can get in touch with our experienced agents.",
+    },
+        {
+      title: "How do I search for properties on Estatein?",
+      subtext:
+        "Learn how to use our user-friendly search tools to find properties that match your criteria.",
     },
     {
       title: "How can I contact an Estatein agent?",
@@ -108,12 +108,12 @@ export default function FAQ() {
         <ThreeStars />
 
         <div className="mt-[14px] lg:ml-4 max-lg:w-full">
-          <p className="text-4xl font-semibold text-white max-lg:ml-2">
+          <p className="text-4xl max-lg:text-[35px] font-semibold text-white max-lg:ml-2">
             Frequently Asked Questions
           </p>
 
           <div className="flex flex-col lg:flex-row items-start lg:items-center mt-4 gap-4 max-lg:ml-2">
-            <p className="text-[#999999] text-[17px] lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
+            <p className="text-[#999999] text-[15px] lg:text-[13px] leading-relaxed lg:mr-auto max-w-3xl">
               Find answers to common questions about Estatein&apos;s services,
               property listings, and the real estate process. We&apos;re here to
               provide clarity and assist you every step of the way.

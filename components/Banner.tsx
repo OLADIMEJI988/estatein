@@ -48,7 +48,7 @@ export default function Banner() {
             onClick={handleClose}
           >
             <Image
-              className="w-full h-[17px] object-cover"
+              className="w-full h-[17px] max-lg:h-[14px] object-cover"
               src="/close.svg"
               alt="close"
               width={20}

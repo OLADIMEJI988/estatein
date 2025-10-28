@@ -10,8 +10,8 @@ export default function Achievements() {
         <ThreeStars />
 
         <div className=" mt-[16px] ml-5 max-lg:ml-2 tracking-wide">
-          <p className="text-[38px] font-urbanist-semibold">Our Achievements</p>
-          <p className="mt-[10px] text-[#999999] text-[15px] max-lg:text-[17px] pr-[50px] max-lg:pr-0">
+          <p className="text-[38px] max-lg:text-[35px] font-urbanist-semibold">Our Achievements</p>
+          <p className="mt-[10px] text-[#999999] text-[15px] pr-[50px] max-lg:pr-0">
             Our story is one of continuous growth and evolution. We started as a
             small team with big dreams, determined to create a real estate
             platform that transcended the ordinary.

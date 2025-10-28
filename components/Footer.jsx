@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Links */}
-      <div className="py-10 sm:py-[65px] tracking-wide flex flex-col lg:flex-row bg-[#141414] px-6 sm:px-10 lg:px-[75px] gap-10 lg:gap-20 max-lg:w-full">
+      <div className="py-10 sm:py-[65px] tracking-wide flex flex-col lg:flex-row bg-[#141414] px-6 max-lg:px-[12px] lg:px-[75px] gap-10 lg:gap-20 max-lg:w-full">
         {/* Left Section */}
         <div className="mr-auto">
           <div className="flex items-center">
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Email Field */}
-          <div className="flex font-urbanist w-full sm:w-72 items-center border border-[#262626] focus-within:border-[#703BF7] tracking-wide py-3 max-lg:py-5 px-3 max-lg:px-5 mt-5 rounded-lg mx-auto lg:mx-0 max-lg:w-full transition-colors duration-200 group">
+          <div className="flex font-urbanist lg:w-72 items-center border border-[#262626] focus-within:border-[#703BF7] tracking-wide py-3 max-lg:py-5 px-3 max-lg:px-5 mt-5 rounded-lg mx-auto lg:mx-0 max-lg:w-[350px] transition-colors duration-200 group">
             <Image
               className="h-[17px] max-lg:h-[27px]"
               src="/email.svg"
@@ -68,14 +68,14 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Enter Your Email"
-              className="bg-transparent outline-none text-[#999999] text-[18px] lg:text-[13px] mr-auto ml-2 w-full placeholder-[#999999]"
+              className="bg-transparent outline-none text-[#999999] text-[15px] lg:text-[13px] mr-auto ml-2 w-full placeholder-[#999999]"
             />
 
             <AnimatedSendSvg />
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 text-center lg:text-left font-urbanist">
+        <div className="grid grid-cols-2 bg-transparent max-lg:px-3 max-lg:w-full sm:grid-cols-3 lg:grid-cols-5 gap-8 text-left font-urbanist">
           {[
             {
               title: "Home",

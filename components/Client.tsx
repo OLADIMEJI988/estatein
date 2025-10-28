@@ -53,7 +53,7 @@ export default function Client({
 
         <div className="mt-[30px] border border-[#262626] w-full rounded-xl p-[24px]">
           <p className="text-[15px] max-lg:text-[17px] text-[#999999]">What They Said 🤗</p>
-          <p className="mt-[10px] text-[15px] max-lg:text-[17px]">{feedback}</p>
+          <p className="mt-[10px] text-[15px]">{feedback}</p>
         </div>
       </div>
     </div>

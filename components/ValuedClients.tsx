@@ -109,10 +109,10 @@ export default function ValuedClients() {
         <ThreeStars />
 
         <div className="mt-[14px] ml-4 max-lg:ml-2 tracking-wide">
-          <p className="text-[38px] font-urbanist-semibold">
+          <p className="text-[38px] max-lg:text-[35px] font-urbanist-semibold">
             Our Valued Clients
           </p>
-          <p className="mt-[10px] text-[#999999] text-[15px] max-lg:text-[17px] pr-[130px] max-lg:pr-0">
+          <p className="mt-[10px] text-[#999999] text-[15px] pr-[130px] max-lg:pr-0">
             At Estatein, we have had the privilege of working with a diverse
             range of clients across various industries. Here are some of the
             clients we&apos;ve had the pleasure of serving

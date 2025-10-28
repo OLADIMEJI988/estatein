@@ -41,7 +41,7 @@ export default function Representative({ img, name, role }: StepProps) {
           </p>
           <p className="mt-1 text-[#999999] text-[16px] max-lg:text-[17px] mb-[20px]">{role}</p>
           <div className="relative w-full flex">
-            <div className="h-9 w-9 max-lg:h-[60px] max-lg:w-[60px] flex justify-center items-center bg-[#703BF7] rounded-full absolute right-3 max-lg:right-0 top-1/2 transform -translate-y-1/2">
+            <div className="h-9 w-9 max-lg:h-[50px] max-lg:w-[50px] flex justify-center items-center bg-[#703BF7] rounded-full absolute right-3 top-1/2 transform -translate-y-1/2">
               <AnimatedSendSvg />
             </div>
 

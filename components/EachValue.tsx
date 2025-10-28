@@ -23,7 +23,7 @@ export default function EachValue({img, title, subtext}: ValueProps) {
           <p className="font-urbanist-semibold text-[20px] max-lg:text-[24px]">{title}</p>
         </div>
 
-        <p className="mt-[16px] text-[#999999] text-[14px] max-lg:text-base w-[290px] max-lg:w-full">{subtext}</p>
+        <p className="mt-[16px] text-[#999999] text-[14px] max-lg:text-[15px] w-[290px] max-lg:w-full">{subtext}</p>
       </div>
     </>
   );

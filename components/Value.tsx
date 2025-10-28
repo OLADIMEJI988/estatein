@@ -10,8 +10,8 @@ export default function Value() {
         <ThreeStars />
         
         <div className="mt-[14px] ml-4 max-lg:ml-2 tracking-wide">
-          <p className="text-[38px] font-urbanist-semibold">Our Values</p>
-          <p className="mt-[10px] text-[#999999] text-[15px] max-lg:text-[17px] w-[400px] max-lg:w-full">
+          <p className="text-[38px] max-lg:text-[35px] font-urbanist-semibold">Our Values</p>
+          <p className="mt-[10px] text-[#999999] text-[15px] w-[400px] max-lg:w-full">
             Our story is one of continuous growth and evolution. We started as a
             small team with big dreams, determined to create a real estate
             platform that transcended the ordinary.

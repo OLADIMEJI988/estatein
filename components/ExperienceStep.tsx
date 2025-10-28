@@ -6,7 +6,7 @@ interface StepProps {
 
 export default function ExperienceStep({ stepnum, title, subtext }: StepProps) {
   return (
-    <div className="w-[413px] max-lg:w-auto ml-5 max-lg:ml-1 tracking-wide mt-[60px]">
+    <div className="w-[413px] max-lg:w-auto ml-5 max-lg:ml-1 tracking-wide mt-[60px] max-lg:mt-[50px]">
       <div className="border-l-[1.5px] border-[#703BF7] p-4 max-lg:p-5 text-[16px] max-lg:text-2xl">
         {stepnum}
       </div>
@@ -22,7 +22,7 @@ export default function ExperienceStep({ stepnum, title, subtext }: StepProps) {
           {title}
         </span>
 
-        <span className="relative z-10 mt-[14px] text-[13px] max-lg:text-[15px] leading-6 text-[#999999] max-lg:leading-7">
+        <span className="relative z-10 mt-[14px] text-[13px] max-lg:text-[15px] leading-6 text-[#999999]">
           {subtext}
         </span>
 
