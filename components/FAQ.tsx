@@ -107,7 +107,7 @@ export default function FAQ() {
       <div className="w-full max-w-[1280px]">
         <ThreeStars />
 
-        <div className="mt-[14px] lg:ml-4 max-lg:w-full">
+        <div className="mt-[14px] max-lg:mt-[16px] lg:ml-4 max-lg:w-full">
           <p className="text-4xl max-lg:text-[35px] font-semibold text-white max-lg:ml-2">
             Frequently Asked Questions
           </p>

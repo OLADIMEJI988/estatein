@@ -30,7 +30,7 @@ export default function Value() {
               />
             </div>
 
-            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] max-lg:my-10 mx-4 bg-[#262626]"></div>
+            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] max-lg:my-10 mx-4 max-lg:mx-0 bg-[#262626]"></div>
 
             <div>
               <EachValue
@@ -53,7 +53,7 @@ export default function Value() {
               />
             </div>
 
-            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] mx-4 max-lg:my-10 bg-[#262626]"></div>
+            <div className="w-[1px] max-lg:w-full h-[120px] max-lg:h-[1px] mx-4 max-lg:mx-0 max-lg:my-10 bg-[#262626]"></div>
 
             <div>
               <EachValue

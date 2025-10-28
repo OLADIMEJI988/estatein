@@ -16,7 +16,7 @@ export default function Client({
 }: ClientProps) {
   return (
     <div className="p-[6px] bg-[#191919] rounded-2xl">
-      <div className="border border-[#262626] w-[540px] max-lg:w-full font-urbanist p-[40px] max-lg:px-[20px] bg-[#141414] rounded-xl">
+      <div className="border border-[#262626] w-[540px] max-lg:w-full font-urbanist p-[40px] max-lg:px-[15px] max-lg:py-[30px] bg-[#141414] rounded-xl">
         <div className="flex max-lg:flex-col gap-[20px]">
           <div className="mr-auto">
             <p className="text-[#999999] text-[16px]">

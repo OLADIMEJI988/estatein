@@ -124,7 +124,7 @@ export default function FeaturedProperties() {
       <div className="w-full max-w-[1280px]">
         <ThreeStars />
 
-        <div className="mt-[14px] lg:ml-4">
+        <div className="mt-[14px] max-lg:mt-[16px] lg:ml-4">
           <p className="text-4xl max-lg:text-[35px] font-semibold text-white max-lg:ml-2">
             Featured Properties
           </p>

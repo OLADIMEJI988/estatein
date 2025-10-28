@@ -14,7 +14,7 @@ export default function PropertyCard({
   moretext,
 }: CardProps) {
   return (
-    <div className="border border-[#262626] bg-transparent w-[370px] max-lg:w-full h-[500px] max-lg:h-[600px] rounded-xl px-[23px] max-lg:px-[19px] pt-7 pb-[26px] flex flex-col justify-between">
+    <div className="border border-[#262626] bg-transparent w-[370px] max-lg:w-full h-[500px] max-lg:h-[600px] rounded-xl px-[23px] max-lg:px-[15px] pt-7 pb-[26px] flex flex-col justify-between">
       <div className="cursor-pointer overflow-hidden rounded-lg">
         <Image
           className="w-full transform transition-transform duration-300 hover:scale-110"
@@ -31,7 +31,7 @@ export default function PropertyCard({
           {title}
         </p>
         <div className="flex text-[12px] relative gap-[7px] items-center">
-          <p className="text-[#999999] text-[12px] max-lg:text-[16px]">
+          <p className="text-[#999999] text-[12px] max-lg:text-[15px]">
             {subtext}
           </p>
           <p className="max-lg:hidden mt-4 underline cursor-pointer left-37 absolute">
@@ -40,8 +40,8 @@ export default function PropertyCard({
         </div>
       </div>
 
-      <div className="flex max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 mt-5 max-lg:mt-6 gap-2">
-        <div className="flex items-center gap-[3px] justify-center border border-[#262626] bg-[#191919] rounded-2xl max-lg:rounded-full px-3 max-lg:px-4 py-[7px] max-lg:py-[9px]">
+      <div className="flex max-lg:grid max-lg:grid-cols-2 max-lg:gap-4 mt-5 gap-2">
+        <div className="flex items-center gap-[3px] max-lg:gap-2 justify-center border border-[#262626] bg-[#191919] rounded-2xl max-lg:rounded-full px-3 max-lg:px-4 py-[7px] max-lg:py-[9px]">
           <Image
             className="w-[16px] max-lg:w-[18px]"
             src="/bedroom.svg"
