@@ -4,17 +4,13 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Banner() {
-  // const [isVisible, setIsVisible] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
 
   const handleClose = () => {
     setIsClosing(true);
     setTimeout(() => {
-      // setIsVisible(false);
     }, 500);
   };
-
-  // if (!isVisible) return null;
 
   return (
     <div
@@ -44,15 +40,15 @@ export default function Banner() {
           </p>
 
           <div
-            className="p-[5px] ml-auto mr-6 max-lg:mr-2 bg-[#303030] hover:bg-[#141414] smooth-transition cursor-pointer rounded-full"
+            className="p-[5px] ml-auto mr-6 max-lg:mr-2 bg-[#303030] max-lg:bg-transparent hover:bg-[#141414] smooth-transition cursor-pointer rounded-full"
             onClick={handleClose}
           >
             <Image
               className="w-full h-[17px] max-lg:h-[14px] object-cover"
               src="/close.svg"
               alt="close"
-              width={20}
-              height={20}
+              width={14}
+              height={14}
               priority
             />
           </div>

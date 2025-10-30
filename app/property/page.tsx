@@ -155,7 +155,7 @@ export default function Property() {
 
   useEffect(() => {
     const handleResize = () => {
-      setCardsPerPage(window.innerWidth < 1024 ? 1 : 3); // 1 card for mobile (<1024px), 3 for desktop
+      setCardsPerPage(window.innerWidth < 1024 ? 1 : 3);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -165,14 +165,14 @@ export default function Property() {
   const handleNext = () => {
     if (startIndex + cardsPerPage < properties.length) {
       setDirection(1);
-      setStartIndex((prev) => prev + 1); // ✅ count in 1’s
+      setStartIndex((prev) => prev + cardsPerPage); 
     }
   };
 
   const handlePrev = () => {
     if (startIndex > 0) {
       setDirection(-1);
-      setStartIndex((prev) => prev - 1); // ✅ count in 1’s
+      setStartIndex((prev) => Math.max(prev - cardsPerPage, 0));
     }
   };
 
@@ -188,13 +188,13 @@ export default function Property() {
   return (
     <>
       <div
-        className="font-urbanist relative mb-[170px] max-lg:mb-0 border-b border-[#262626] px-[65px] max-lg:px-[12px] py-[100px] max-lg:pt-[30px] max-lg:pb-[40px]"
+        className="font-urbanist relative mb-[170px] mt-[12px] lg:mt-[30px] max-lg:mb-0 border-b border-[#262626] px-[65px] max-lg:px-[12px] py-[100px] max-lg:pt-[40px] max-lg:pb-[50px]"
         style={{
           background:
             "linear-gradient(90deg, #1D1D1D 0%, #1B1B1B 3%, transparent 40%)",
         }}
       >
-        <p className="font-urbanist-semibold text-[38px]">
+        <p className="font-urbanist-semibold text-[38px] max-lg:text-[35px]">
           Find Your Dream Property
         </p>
         <p className="text-[#999999] mt-[10px] text-[14px] max-lg:text-[15px]">
@@ -308,10 +308,10 @@ export default function Property() {
               <button
                 onClick={handlePrev}
                 disabled={startIndex === 0}
-                className="py-[12px] px-[11px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
+                className="py-[12px] px-[11px] rounded-full bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[15.7px] max-lg:w-[17px] rounded-full"
+                  className="w-[15.7px] max-lg:w-[17px]"
                   src="/previous.svg"
                   alt="banner"
                   width={30}
@@ -322,10 +322,10 @@ export default function Property() {
               <button
                 onClick={handleNext}
                 disabled={startIndex + cardsPerPage >= totalCards}
-                className="p-[8px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
+                className="p-[8px] bg-[#191919] rounded-full border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[21px] max-lg:w-[23px] rounded-full"
+                  className="w-[21px] max-lg:w-[23px]"
                   src="/next.svg"
                   alt="banner"
                   width={30}

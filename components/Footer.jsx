@@ -39,7 +39,7 @@ export default function Footer() {
       {/* Main Footer Links */}
       <div className="py-10 sm:py-[65px] tracking-wide flex flex-col lg:flex-row bg-[#141414] px-6 max-lg:px-[12px] lg:px-[75px] gap-10 lg:gap-20 max-lg:w-full">
         {/* Left Section */}
-        <div className="mr-auto">
+        <div className="w-full lg:w-auto">
           <div className="flex items-center">
             <Image
               className="h-[30px] max-lg:h-[40px] object-contain"
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Email Field */}
-          <div className="flex font-urbanist lg:w-72 items-center border border-[#262626] focus-within:border-[#703BF7] tracking-wide py-3 max-lg:py-5 px-3 max-lg:px-5 mt-5 rounded-lg mx-auto lg:mx-0 max-lg:w-[350px] transition-colors duration-200 group">
+          <div className="flex font-urbanist w-full lg:w-72 items-center border border-[#262626] focus-within:border-[#703BF7] tracking-wide py-3 max-lg:py-4 px-3 max-lg:px-5 mt-5 rounded-lg mx-auto lg:mx-0 transition-colors duration-200 group">
             <Image
               className="h-[17px] max-lg:h-[27px]"
               src="/email.svg"
@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 bg-transparent max-lg:pl-[6%] max-lg:w-full sm:grid-cols-3 lg:grid-cols-5 gap-8 text-left font-urbanist">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-transparent max-lg:pl-[6%] max-lg:w-full gap-8 max-lg:gap-9 text-left font-urbanist">
           {[
             {
               title: "Home",
@@ -116,7 +116,10 @@ export default function Footer() {
               links: ["Contact Form", "Our Offices"],
             },
           ].map((section, idx) => (
-            <div key={idx} className="text-[13px]">
+            <div
+              key={idx}
+              className="text-[13px] py-4 "
+            >
               <p className="text-[#999999] text-[16px] lg:text-[14px] mb-4 lg:mb-3">
                 {section.title}
               </p>
@@ -133,8 +136,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="py-4 font-urbanist tracking-wide flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 px-6 sm:px-10 lg:px-[75px] bg-[#191919] text-center sm:text-left max-lg:w-full">
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 sm:text-[11px] text-[12px] tracking-wide justify-center sm:justify-start">
+      <div className="py-4 font-urbanist tracking-wide flex max-lg:flex-col items-center justify-between gap-4 sm:gap-0 px-6 sm:px-10 lg:px-[75px] bg-[#191919] text-center sm:text-left max-lg:w-full">
+        <div className="flex max-lg:flex-col gap-3 sm:gap-6 sm:text-[11px] text-[12px] tracking-wide justify-center sm:justify-start">
           <p>@2023 Estatein. All Rights Reserved.</p>
           <p>Terms & Conditions</p>
           <p>Developed by Sholanke Oladimeji</p>

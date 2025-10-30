@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -13,23 +13,32 @@ import OfficeCard from "@/components/OfficeCard";
 export default function Contact() {
   const [activeTab, setActiveTab] = useState<TabType>("All");
   const [startIndex, setStartIndex] = useState(0);
-  const cardsPerPage = 2;
+  const [cardsPerPage, setCardsPerPage] = useState(2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCardsPerPage(window.innerWidth < 1024 ? 1 : 2);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const officeCards = useMemo(
     () => [
       {
-        category: "All",
-        location: "Main Headquarters",
-        address: "123 Estatein Plaza, City Center, Metropolis",
-        subtext:
-          "Our main headquarters serve as the heart of Estatein. Located in the bustling city center, this is where our core team of experts operates, driving the excellence and innovation that define us.",
-      },
-      {
         category: "Regional",
-        location: "Regional Offices",
+        location: "Regional Office",
         address: "456 Urban Avenue, Downtown District, Metropolis",
         subtext:
           "Estatein's presence extends to multiple regions, each with its own dynamic real estate landscape. Discover our regional offices, staffed by local experts who understand the nuances of their respective markets.",
+      },
+      {
+        category: "International",
+        location: "Main Headquarter",
+        address: "123 Estatein Plaza, City Center, Metropolis",
+        subtext:
+          "Our main headquarters serve as the heart of Estatein. Located in the bustling city center, this is where our core team of experts operates, driving the excellence and innovation that define us.",
       },
       {
         category: "International",
@@ -46,14 +55,14 @@ export default function Contact() {
           "This regional office serves suburban clients, offering tailored real estate solutions in fast-growing neighborhoods.",
       },
       {
-        category: "Coastal",
+        category: "Regional",
         location: "Seaside Hub",
         address: "77 Ocean Drive, Marina Bay, Seaside City",
         subtext:
           "Overlooking the coast, our Seaside Hub manages premium waterfront properties and leisure estates, blending business with breathtaking ocean views.",
       },
       {
-        category: "Tech District",
+        category: "International",
         location: "Innovation Office",
         address: "901 Silicon Street, Tech Valley, Metropolis",
         subtext:
@@ -121,26 +130,26 @@ export default function Contact() {
   return (
     <>
       <div
-        className="font-urbanist relative px-[65px] py-[95px]"
+        className="font-urbanist relative mt-[12px] lg:mt-[30px] px-[65px] max-lg:px-[12px] py-[95px] max-lg:py-[50px]"
         style={{
           background:
             "linear-gradient(90deg, #1D1D1D 0%, #1B1B1B 3%, transparent 40%)",
         }}
       >
-        <p className="font-urbanist-semibold text-[38px]">
+        <p className="font-urbanist-semibold text-[38px] max-lg:text-[35px]">
           Get in Touch with Estatein
         </p>
-        <p className="text-[#999999] mt-[10px] text-[14px]">
-          Welcome to Estatein&apos;s Contact Us page. We&apos;re here to assist you with
-          any inquiries, requests, or feedback you may have. Whether you&apos;re
-          looking to buy or sell a property, explore investment opportunities,
-          or simply want to connect, we&apos;re just a message away. Reach out to us,
-          and let&apos;s start a conversation.
+        <p className="text-[#999999] mt-[10px] text-[14px] max-lg:text-[15px]">
+          Welcome to Estatein&apos;s Contact Us page. We&apos;re here to assist
+          you with any inquiries, requests, or feedback you may have. Whether
+          you&apos;re looking to buy or sell a property, explore investment
+          opportunities, or simply want to connect, we&apos;re just a message
+          away. Reach out to us, and let&apos;s start a conversation.
         </p>
       </div>
 
       <div className="p-2 bg-[#191919] mb-[80px]">
-        <div className="flex gap-4 justify-center p-4 bg-[#141414] border border-[#262626]">
+        <div className="flex max-lg:grid max-lg:grid-cols-2 gap-4 max-lg:gap-3 justify-center max-lg:text-center p-4 max-lg:p-3 bg-[#141414] border border-[#262626]">
           <Card img="/mail.svg" text="sholanke49@gmail.com" />
           <Card img="/purplephone.svg" text="+234 8136170619" />
           <Card img="/location.svg" text="Main Headquarters" />
@@ -148,25 +157,25 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="mx-[65px] mb-[80px] font-urbanist">
+      <div className="mx-[65px] max-lg:mx-[12px] mb-[80px] font-urbanist">
         <ThreeStars />
 
-        <div className="mt-[14px] ml-4 tracking-wide">
-          <p className="text-4xl font-urbanist-semibold text-white">
+        <div className="mt-[14px] ml-4 max-lg:ml-2 tracking-wide">
+          <p className="text-4xl max-lg:text-[35px] font-urbanist-semibold text-white">
             Let&apos;s Connect
           </p>
 
-          <p className="text-[#999999] text-[13px] mr-auto mt-4">
-            We&apos;re excited to connect with you and learn more about your real
-            estate goals. Use the form below to get in touch with Estatein.
+          <p className="text-[#999999] text-[13px] max-lg:text-[15px] mr-auto mt-4">
+            We&apos;re excited to connect with you and learn more about your
+            real estate goals. Use the form below to get in touch with Estatein.
             Whether you&apos;re a prospective client, partner, or simply curious
-            about our services, we&apos;re here to answer your questions and provide
-            the assistance you need.
+            about our services, we&apos;re here to answer your questions and
+            provide the assistance you need.
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 border border-[#262626] rounded-lg p-[60px] ml-4 mt-12">
-          <div className="flex gap-[30px]">
+        <div className="flex flex-col gap-8 border border-[#262626] rounded-lg p-[60px] max-lg:px-[20px] ml-4 max-lg:ml-0 mt-12">
+          <div className="flex max-lg:flex-col gap-[30px]">
             <InputValidation
               title="First Name"
               placeholder="Enter First Name"
@@ -188,7 +197,7 @@ export default function Contact() {
             />
           </div>
 
-          <div className="flex gap-[30px] mt-[20px]">
+          <div className="flex max-lg:flex-col gap-[30px] mt-[20px] max-lg:mt-0">
             <InputValidation
               title="Phone"
               placeholder="Enter Phone Number"
@@ -212,7 +221,7 @@ export default function Contact() {
             />
           </div>
 
-          <div className="gap-[30px] w-full mt-[20px] items-start">
+          <div className="gap-[30px] w-full mt-[20px] max-lg:mt-0 items-start">
             <p>Message</p>
             <textarea
               placeholder="Enter your Message here.."
@@ -220,8 +229,8 @@ export default function Contact() {
             />
           </div>
 
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-[6px]">
+          <div className="flex max-lg:flex-col items-center justify-between">
+            <div className="flex items-center gap-[6px] max-lg:gap-[10px]">
               <input
                 type="checkbox"
                 className="appearance-none w-[20px] h-[20px] border border-[#262626] rounded-sm bg-[#191919] checked:border-[#703BF7] checked:before:content-['✓'] checked:before:text-[#703BF7] checked:before:flex checked:before:items-center checked:before:justify-center cursor-pointer"
@@ -234,37 +243,37 @@ export default function Contact() {
               </p>
             </div>
 
-            <button className="bg-[#703BF7] px-[25px] py-[14px] rounded-lg text-[15px] cursor-pointer">
+            <button className="bg-[#703BF7] px-[25px] max-lg:w-full max-lg:mt-10 py-[14px] rounded-lg text-[15px] cursor-pointer">
               Send Your Message
             </button>
           </div>
         </div>
       </div>
 
-      <div className="mx-[65px] mb-[80px] font-urbanist">
+      <div className="mx-[65px] max-lg:mx-[12px] mb-[80px] font-urbanist">
         <ThreeStars />
 
-        <div className="mt-[14px] ml-4 tracking-wide">
+        <div className="mt-[14px] ml-4 max-lg:ml-2 tracking-wide">
           <p className="text-4xl font-urbanist-semibold text-white">
             Discover Our Office Locations
           </p>
 
           <p className="text-[#999999] text-[13px] mr-auto mt-4">
             Estatein is here to serve you across multiple locations. Whether
-            you&apos;re looking to meet our team, discuss real estate opportunities,
-            or simply drop by for a chat, we have offices conveniently located
-            to serve your needs. Explore the categories below to find the
-            Estatein office nearest to you.
+            you&apos;re looking to meet our team, discuss real estate
+            opportunities, or simply drop by for a chat, we have offices
+            conveniently located to serve your needs. Explore the categories
+            below to find the Estatein office nearest to you.
           </p>
         </div>
 
-        <div className="relative ml-4 mt-12">
-          <div className="w-auto inline-flex bg-[#191919] p-3 text-white gap-[10px] rounded-lg tracking-wide">
+        <div className="relative ml-4 max-lg:ml-0 mt-12">
+          <div className="w-auto inline-flex bg-[#191919] p-3 max-lg:gap-3 max-lg:w-full max-lg:justify-center text-white gap-[10px] rounded-lg tracking-wide">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => handleSetTab(tab)}
-                className={`relative px-7 py-3 rounded-lg border border-[#262626] cursor-pointer transition-colors duration-200 focus:outline-none ${
+                className={`relative px-7 max-lg:px-4 max-lg:w-full py-3 rounded-lg border border-[#262626] cursor-pointer transition-colors duration-200 focus:outline-none ${
                   activeTab === tab
                     ? "bg-[#141414] text-white border border-[#262626]"
                     : "bg-[#191919] text-[#999999] hover:bg-[#141414]"
@@ -291,7 +300,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="ml-4 mt-[65px]">
+        <div className="ml-4 max-lg:ml-0 mt-[65px] max-lg:mt-[60px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={`${activeTab}-${startIndex}`}
@@ -299,14 +308,14 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.35 }}
-              className="flex gap-5"
+              className="flex max-lg:flex-col max-lg:w-full gap-5"
             >
               {filteredOffices
                 .slice(startIndex, startIndex + cardsPerPage)
                 .map((office, idx) => (
                   <div
                     key={idx}
-                    className="w-[50%] h-[350px] flex-shrink-0 flex flex-col"
+                    className="w-[50%] max-lg:w-full h-[350px] flex-shrink-0 flex flex-col"
                   >
                     <div className="flex-grow flex">
                       <OfficeCard {...office} />
@@ -317,8 +326,8 @@ export default function Contact() {
           </AnimatePresence>
 
           {/* Navigation */}
-          <div className="flex justify-between w-full gap-2 mt-6 items-center">
-            <p className="text-[#999999] text-sm -mt-3">
+          <div className="flex justify-between w-full gap-2 mt-6 max-lg:mt-36 items-center">
+            <p className="text-[#999999] text-sm max-lg:text-base -mt-3">
               <span
                 className={currentPage === 1 ? "text-[#666666]" : "text-white"}
               >
@@ -334,14 +343,14 @@ export default function Contact() {
               </span>
             </p>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 max-lg:gap-3">
               <button
                 onClick={handlePrev}
                 disabled={startIndex === 0}
-                className="py-[12px] px-[11px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
+                className="py-[12px] px-[11px] bg-[#191919] rounded-full border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[15.7px] rounded-full"
+                  className="w-[15.7px] max-lg:w-[17px]"
                   src="/previous.svg"
                   alt="previous"
                   width={30}
@@ -353,10 +362,10 @@ export default function Contact() {
               <button
                 onClick={handleNext}
                 disabled={startIndex + cardsPerPage >= totalCards}
-                className="p-[8px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
+                className="p-[8px] bg-[#191919] rounded-full border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[21px] rounded-full"
+                  className="w-[21px] max-lg:w-[23px]"
                   src="/next.svg"
                   alt="next"
                   width={30}

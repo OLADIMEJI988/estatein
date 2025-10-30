@@ -22,10 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${urbanist.variable} antialiased`}>
+    <html lang="en" className={urbanist.variable}>
+      <body className="antialiased">
         <Banner />
-        <Navbar /> 
+        <Navbar />
         {children}
         <Footer />
       </body>

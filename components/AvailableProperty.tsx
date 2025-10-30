@@ -15,7 +15,6 @@ export default function AvailableProperty({
   img,
   title,
   subtext,
-  moretext,
   price,
   location,
   destination,
@@ -34,17 +33,17 @@ export default function AvailableProperty({
       </div>
 
       <div className="mt-[24px]">
-        <div className="border max-w-[305px] mb-[16px] flex justify-center border-[#262626] bg-[#191919] py-1 rounded-full text-[13px]">
+        <div className="border w-[310px] max-lg:w-full mb-[16px] flex justify-center border-[#262626] bg-[#191919] py-1 max-lg:py-2 rounded-full text-[13px] max-lg:text-[15px]">
           <p>
             {location} - <span>{destination}</span>
           </p>
         </div>
-        <p className="mb-[5px]">{title}</p>
-        <div className="flex text-[12px] relative gap-[7px] items-center">
-          <p className="text-[#999999] text-[12px]">{subtext}</p>
-          <p className="mt-4 underline cursor-pointer left-37 absolute">
+        <p className="mb-[5px] max-lg:text-[18px]">{title}</p>
+        <div className="flex text-[12px] max-lg:text-[15px] relative gap-[7px] items-center">
+          <p className="text-[#999999] text-[12px] max-lg:text-[14px]">{subtext}</p>
+          {/* <p className="mt-4 underline cursor-pointer left-36 absolute">
             {moretext}
-          </p>
+          </p> */}
         </div>
       </div>
 

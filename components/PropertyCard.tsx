@@ -14,7 +14,7 @@ export default function PropertyCard({
   moretext,
 }: CardProps) {
   return (
-    <div className="border border-[#262626] bg-transparent w-[370px] max-lg:w-full h-[500px] max-lg:h-[600px] rounded-xl px-[23px] max-lg:px-[15px] pt-7 pb-[26px] flex flex-col justify-between">
+    <div className="border border-[#262626] bg-transparent w-[370px] max-lg:w-full h-[500px] max-lg:h-[600px] rounded-xl px-[23px] max-lg:px-[12px] pt-7 pb-[26px] flex flex-col justify-between">
       <div className="cursor-pointer overflow-hidden rounded-lg">
         <Image
           className="w-full transform transition-transform duration-300 hover:scale-110"
@@ -34,9 +34,9 @@ export default function PropertyCard({
           <p className="text-[#999999] text-[12px] max-lg:text-[15px]">
             {subtext}
           </p>
-          <p className="max-lg:hidden mt-4 underline cursor-pointer left-37 absolute">
+          {/* <p className="max-lg:hidden mt-7 underline cursor-pointer left-36 absolute">
             {moretext}
-          </p>
+          </p> */}
         </div>
       </div>
 

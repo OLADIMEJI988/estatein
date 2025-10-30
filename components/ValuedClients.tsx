@@ -176,10 +176,10 @@ export default function ValuedClients() {
               <button
                 onClick={handlePrev}
                 disabled={startIndex === 0}
-                className="py-[12px] px-[11px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
+                className="py-[12px] px-[11px] bg-[#191919] rounded-full border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[15.7px] max-lg:w-[17px] rounded-full"
+                  className="w-[15.7px] max-lg:w-[17px]"
                   src="/previous.svg"
                   alt="prev"
                   width={30}
@@ -190,10 +190,10 @@ export default function ValuedClients() {
               <button
                 onClick={handleNext}
                 disabled={startIndex + cardsPerPage >= clients.length}
-                className="p-[8px] bg-[#191919] border border-[#262626] rounded-4xl text-white cursor-pointer disabled:opacity-40"
+                className="p-[8px] bg-[#191919] border border-[#262626] rounded-4xl rounded-full text-white cursor-pointer disabled:opacity-40"
               >
                 <Image
-                  className="w-[21px] max-lg:w-[23px] rounded-full"
+                  className="w-[21px] max-lg:w-[23px]"
                   src="/next.svg"
                   alt="next"
                   width={30}

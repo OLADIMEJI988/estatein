@@ -10,16 +10,16 @@ interface CardProps {
 
 export default function OfficeCard({ location, address, subtext }: CardProps) {
   return (
-    <div className="border border-[#262626] p-9 rounded-lg flex flex-col justify-between h-full">
+    <div className="border border-[#262626] p-9 max-lg:px-[20px] rounded-lg flex flex-col justify-between h-full">
       <div className="text-sm">
         <p>{location}</p>
-        <p className="mt-[6px] mb-[10px] text-[21px] font-semibold">
+        <p className="mt-[6px] mb-[10px] text-[21px] font-semibold max-lg:leading-7">
           {address}
         </p>
         <p className="text-[14px] text-[#999999]">{subtext}</p>
       </div>
 
-      <div className="flex mt-7 gap-2 flex-wrap">
+      <div className="flex mt-7 gap-2 max-lg:gap-3 flex-wrap">
         <button className="bg-[#191919] border border-[#262626] rounded-full py-[10px] px-4 flex text-sm tracking-wide items-center gap-1">
           <Image
             className="w-5 h-auto"
@@ -57,7 +57,7 @@ export default function OfficeCard({ location, address, subtext }: CardProps) {
         </button>
       </div>
 
-      <button className="bg-[#703BF7] py-[13px] w-full rounded-lg text-sm tracking-wide mt-auto cursor-pointer">
+      <button className="bg-[#703BF7] py-[13px] max-lg:mt-8 w-full rounded-lg text-sm max-lg:text-[15px] tracking-wide mt-auto cursor-pointer">
         Get Direction
       </button>
     </div>

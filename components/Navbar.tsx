@@ -30,9 +30,7 @@ export default function Navbar() {
 
       {/* Navbar */}
       <div
-        className={`min-w-0 border borderbg bg-[#1A1A1A] flex justify-between max-lg:px-3 px-12 items-center py-[14px] max-lg:py-[17px] font-urbanist relative z-50 transition-all duration-300 ${
-          menuOpen ? "max-lg:opacity-0 max-lg:pointer-events-none" : ""
-        }`}
+        className={`fixed top-0 left-0 w-full bg-[#1A1A1A] flex justify-between max-lg:px-3 px-12 items-center py-[14px] max-lg:py-[17px] font-urbanist z-[900] transition-all duration-300`}
       >
         {/* Logo */}
         <div className="flex items-center">
@@ -97,10 +95,10 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-[#0F0F0F]/95 backdrop-blur-sm flex flex-col items-center justify-center space-y-8 text-white font-urbanist text-2xl z-40 transition-all duration-500">
-          {/* Close Icon */}
+        <div className="fixed inset-0 bg-[#0F0F0F]/95 backdrop-blur-sm flex flex-col items-center justify-center space-y-8 text-white font-urbanist text-2xl z-[1000] transition-all duration-500">
+          {/* Close Icon (above overlay but under nav) */}
           <div
-            className="absolute top-6 right-6 cursor-pointer"
+            className="absolute top-[90px] right-6 cursor-pointer z-[1100]"
             onClick={() => setMenuOpen(false)}
           >
             <Image
@@ -112,16 +110,32 @@ export default function Navbar() {
             />
           </div>
 
-          <Link href="/" onClick={() => setMenuOpen(false)} className={linkClasses("/")}>
+          <Link
+            href="/"
+            onClick={() => setMenuOpen(false)}
+            className={linkClasses("/")}
+          >
             Home
           </Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)} className={linkClasses("/about")}>
+          <Link
+            href="/about"
+            onClick={() => setMenuOpen(false)}
+            className={linkClasses("/about")}
+          >
             About Us
           </Link>
-          <Link href="/property" onClick={() => setMenuOpen(false)} className={linkClasses("/property")}>
+          <Link
+            href="/property"
+            onClick={() => setMenuOpen(false)}
+            className={linkClasses("/property")}
+          >
             Properties
           </Link>
-          <Link href="/ourservices" onClick={() => setMenuOpen(false)} className={linkClasses("/ourservices")}>
+          <Link
+            href="/ourservices"
+            onClick={() => setMenuOpen(false)}
+            className={linkClasses("/ourservices")}
+          >
             Services
           </Link>
 

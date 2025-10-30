@@ -10,7 +10,7 @@ import ValuedClients from "@/components/ValuedClients";
 
 export default function About() {
   return (
-    <div className="font-urbanist mt-[20px] lg:mt-[70px] mb-[120px] max-lg:mb-[100px] max-w-[1200px] max-lg:w-full mx-auto px-4 max-lg:px-[12px] overflow-hidden">
+    <div className="font-urbanist mt-[30px] max-lg:mt-[45px] lg:mt-[80px] mb-[120px] max-lg:mb-[100px] max-w-[1200px] max-lg:w-full mx-auto px-4 max-lg:px-[12px] overflow-hidden">
       <div className="flex items-center gap-[40px] max-lg:flex-col-reverse max-lg:gap-10">
         <div className="items-start mr-auto max-lg:mr-0">
           <div className="flex justify-start">

@@ -10,7 +10,7 @@ interface CardProps {
 
 export default function ManagementOffer({ img, title, subtext }: CardProps) {
   return (
-    <div className="border border-[#242424] bg-[#141414] rounded-xl w-full p-[35px] tracking-wide">
+    <div className="border border-[#242424] bg-[#141414] rounded-xl w-full p-[35px] max-lg:px-[25px] tracking-wide">
       <div className="flex items-center gap-4 text-lg mb-[18px]">
         <div>
           <Image
@@ -23,10 +23,10 @@ export default function ManagementOffer({ img, title, subtext }: CardProps) {
           />
         </div>
 
-        <p className="text-[17px]">{title}</p>
+        <p className="text-[17px] max-lg:text-[20px]">{title}</p>
       </div>
 
-      <p className="text-[#999999] text-[14px] leading-[20px]">{subtext}</p>
+      <p className="text-[#999999] text-[14px] max-lg:text-[15px] leading-[20px] max-lg:leading-[23px]">{subtext}</p>
     </div>
   );
 }
