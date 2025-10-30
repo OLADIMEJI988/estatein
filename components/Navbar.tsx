@@ -98,7 +98,7 @@ export default function Navbar() {
         <div className="fixed inset-0 bg-[#0F0F0F]/95 backdrop-blur-sm flex flex-col items-center justify-center space-y-8 text-white font-urbanist text-2xl z-[1000] transition-all duration-500">
           {/* Close Icon (above overlay but under nav) */}
           <div
-            className="absolute top-[90px] right-6 cursor-pointer z-[1100]"
+            className="absolute top-[25px] right-6 cursor-pointer z-[1100]"
             onClick={() => setMenuOpen(false)}
           >
             <Image

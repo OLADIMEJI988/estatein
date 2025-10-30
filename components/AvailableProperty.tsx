@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 interface CardProps {
   img: string;
@@ -40,7 +40,9 @@ export default function AvailableProperty({
         </div>
         <p className="mb-[5px] max-lg:text-[18px]">{title}</p>
         <div className="flex text-[12px] max-lg:text-[15px] relative gap-[7px] items-center">
-          <p className="text-[#999999] text-[12px] max-lg:text-[14px]">{subtext}</p>
+          <p className="text-[#999999] text-[12px] max-lg:text-[14px]">
+            {subtext}
+          </p>
           {/* <p className="mt-4 underline cursor-pointer left-36 absolute">
             {moretext}
           </p> */}
@@ -53,11 +55,15 @@ export default function AvailableProperty({
           <p className="mt-1 font-semibold tracking-wide">{price}</p>
         </div>
 
-        <Link href="/propertydetails">
+        {/* <Link href="/propertydetails">
           <button className="px-8 py-[13px] text-[13px] bg-[#703BF7] cursor-pointer rounded-lg">
             View Property Details
           </button>
-        </Link>
+        </Link> */}
+
+        <button className="px-8 py-[13px] text-[13px] bg-[#703BF7] cursor-pointer rounded-lg">
+          View Property Details
+        </button>
       </div>
     </div>
   );

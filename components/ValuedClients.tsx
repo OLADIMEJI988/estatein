@@ -172,7 +172,7 @@ export default function ValuedClients() {
               </span>
             </p>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 max-lg:gap-3">
               <button
                 onClick={handlePrev}
                 disabled={startIndex === 0}

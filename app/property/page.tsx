@@ -104,7 +104,7 @@ export default function Property() {
       moretext: "Read More",
       price: "$700,000",
       location: "Countryside Charm",
-      destination: "Escape to Nature's Embrace",
+      destination: "Escape to Nature",
     },
     {
       img: "/seaside.svg",
@@ -124,7 +124,7 @@ export default function Property() {
       moretext: "Read More",
       price: "$1,250,000",
       location: "Countryside Charm",
-      destination: "Escape to Nature's Embrace",
+      destination: "Escape to Nature",
     },
     {
       img: "/seaside.svg",
