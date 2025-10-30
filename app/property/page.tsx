@@ -84,7 +84,7 @@ export default function Property() {
       moretext: "Read More",
       price: "$350,000",
       location: "Countryside Charm",
-      destination: "Escape to Nature's Embrace",
+      destination: "Escape to Nature",
     },
     {
       img: "/metropolitan.svg",
